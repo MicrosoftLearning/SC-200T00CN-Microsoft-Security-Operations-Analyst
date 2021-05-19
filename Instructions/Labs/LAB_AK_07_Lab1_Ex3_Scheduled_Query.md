@@ -24,7 +24,7 @@
 
 10. 对于“严重性”，选择 **“中”**
 
-11. 选择 v“下一步: 设置规则逻辑 >”** 按钮：
+11. 选择 **“下一步: 设置规则逻辑 >”** 按钮：
 
 12. 对于规则查询，粘贴以下 KQL 语句：
 
@@ -85,11 +85,11 @@ timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntit
 
 8. 关闭浏览器。
 
-9. 打开浏览器并导航到 https://portal.office.com，然后尝试使用用户 ChristieC@**租户电子邮件域**登录，密码应与管理员的租户密码相同。  你应接收到警告称将会锁定帐户。
+9. 打开浏览器并导航到 https://portal.office.com， 然后尝试使用用户 ChristieC@**租户电子邮件域**登录，密码应与管理员的租户密码相同。  你应接收到警告称将会锁定帐户。
 
 10. 关闭浏览器。等待 10 分钟以便警报处理。
 
-11.  在 Microsoft Edge 浏览器中，转到 Azure 门户 (https://portal.azure.com)。
+11.  在 Microsoft Edge 浏览器中，转到 Azure 门户 (https://portal.azure.com)
 
 12. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者为管理员用户提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
 

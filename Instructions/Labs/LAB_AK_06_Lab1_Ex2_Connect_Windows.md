@@ -60,7 +60,7 @@
 
 7. 选择 **“为 Azure Windows 虚拟机下载和安装代理”**。
 
-8. 从你刚才在上一步中创建的列表中选择 **“AZWIN01”** 虚拟机，然后选择**“连接”**。等到连接消息出现。
+8. 从你刚才在上一步中创建的列表中选择 **“AZWIN01”** 虚拟机，然后选择 **“连接”**。等到连接消息出现。
 
 9. 在导航列表中选择 **“虚拟机”**。现在应能看到虚拟机已连接。
 
@@ -82,7 +82,7 @@
 
 2. 打开浏览器，搜索、下载并安装新的 Microsoft Edge 浏览器。启动新的 Microsoft Edge 浏览器。
 
-3. 打开浏览器并使用你的凭据登录到 Azure 门户 (https://portal.azure.com)。
+3. 打开浏览器并使用你的凭据登录到 Azure 门户 (https://portal.azure.com)
 
 4. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
 
@@ -171,7 +171,7 @@
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
-2. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)，并使用**租户电子邮件**凭据登录（如果当前不在该门户中）。
+2. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)， 并使用 **租户电子邮件** 凭据登录（如果当前不在该门户中）。
 
 3. 从左侧菜单栏中选择 **“设置”**。
 

@@ -12,8 +12,8 @@
 
 由于此课程可能由学习合作伙伴使用几个授权实验室托管提供者中的任何一个提供，因此，检索与租户关联的租户 ID 的相关实际步骤可能会因实验室托管提供者而有所不同。因此，讲师将在课程中为你提供有关如何检索此信息的必要说明。你应该记录以供稍后使用的信息包括：
 
-	- **租户后缀 ID**。此 ID 适用于将在整个实验室中用于登录 Microsoft 365 的 onmicrosoft.com 帐户。其格式为 **{username}@M365xZZZZZZ.onmicrosoft.com**，其中 ZZZZZZ 是实验室托管提供者提供的唯一租户后缀 ID。记录此 ZZZZZZ 值以供稍后使用。当有任何实验室步骤指示你登录 Microsoft 365 门户时，都必须输入在此处获取的 ZZZZZZ 值。
-	- **租户密码**。这是由实验室托管提供者提供的管理员帐户的密码。
+- **租户后缀 ID**。此 ID 适用于将在整个实验室中用于登录 Microsoft 365 的 onmicrosoft.com 帐户。其格式为 **{username}@M365xZZZZZZ.onmicrosoft.com**，其中 ZZZZZZ 是实验室托管提供者提供的唯一租户后缀 ID。记录此 ZZZZZZ 值以供稍后使用。当有任何实验室步骤指示你登录 Microsoft 365 门户时，都必须输入在此处获取的 ZZZZZZ 值。
+- **租户密码**。这是由实验室托管提供者提供的管理员帐户的密码。
 	
 
 ### 任务 2： 初始化 Microsoft Defender for Endpoint。
@@ -25,7 +25,7 @@
 
 2.  打开 Microsoft Edge 浏览器，搜索 “Microsoft Edge 浏览器更新”，然后下载并安装新版 Microsoft Edge 浏览器。必须执行此操作，以确保在托管虚拟机中运行最新版本的 Microsoft Edge。启动新的 Microsoft Edge 浏览器。
 
-3.  在 Microsoft Edge 浏览器中，转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)。
+3.  在 Microsoft Edge 浏览器中，转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)
 
 4. 在 **“登录”** 对话框中，复制并粘贴实验室托管提供者为管理员用户名提供的租户电子邮件帐户，然后选择 **“下一步”**。
 
@@ -53,7 +53,7 @@
 
 在此任务中，你需要将设备加入 Microsoft Defender for Endpoint。
 
-1. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)，并使用**租户电子邮件**凭据登录（如果当前不在该门户中）。
+1. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)， 并使用 **租户电子邮件** 凭据登录（如果当前不在该门户中）。
 
 2. 从左侧菜单栏中选择 **“设置”**。
 

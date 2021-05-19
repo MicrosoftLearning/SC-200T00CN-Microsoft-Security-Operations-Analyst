@@ -10,7 +10,7 @@
 
 在此任务中，你将运行 6 个模拟攻击，以探索 Microsoft Defender for Endpoint 的功能。
 
-1. 如果你还未在浏览器中打开 Microsoft Defender 安全中心，请转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)，并以租户管理员的身份登录。
+1. 如果你还未在浏览器中打开 Microsoft Defender 安全中心，请转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)， 并以租户管理员的身份登录。
 
 2. 从菜单中选择 **“评估和教程”**，然后从左侧选择 **“模拟和教程”**。
 

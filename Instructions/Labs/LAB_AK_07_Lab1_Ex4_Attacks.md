@@ -4,7 +4,7 @@
 
 在此练习中你不会执行任何操作。  本练习将解释你将执行的攻击。
 
-攻击模式基于开源项目：https://github.com/redcanaryco/atomic-red-team
+攻击模式基于开源项目： https://github.com/redcanaryco/atomic-red-team
 
 **备注** 某些设置仅出于实验室目的在较小的时间范围内触发。
 

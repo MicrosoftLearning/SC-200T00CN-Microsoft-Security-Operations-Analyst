@@ -48,7 +48,7 @@
 
 7. 选择 **“转到 Azure Sentinel 社区”** 按钮。
 
-8. 选择 **“Playbooks” 文件夹。
+8. 选择 **“Playbooks”** 文件夹。
 
 9. 选择 **“Post-Message-Teams”** 文件夹。
 
