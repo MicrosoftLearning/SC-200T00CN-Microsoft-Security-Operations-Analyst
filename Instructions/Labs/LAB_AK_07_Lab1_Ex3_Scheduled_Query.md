@@ -28,12 +28,14 @@
 
 12. 对于规则查询，粘贴以下 KQL 语句：
 
-SigninLogs
-| where ResultType == "50057"
-| where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
-| summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
-applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
-| extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```
+ SigninLogs
+ | where ResultType == "50057"
+ | where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
+ | summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
+ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
+ | extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```
 
 **警告：** 对虚拟机使用粘贴功能时。  可能添加额外的 | （竖线）字符。  确保粘贴的内容类似以下 KQL 语句。
 
@@ -41,7 +43,9 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 
 13. 查看“映射”条目。  实体在查询中显示为已映射，因为查询输出包括以下字段：
 
-timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```
+ timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```
 
 14. 回到“查询计划”区域的“分析规则向导 - 创建新规则”边栏选项卡，为“运行查询间隔”选项输入 **“5”** 并选择 **“分钟”**。
 

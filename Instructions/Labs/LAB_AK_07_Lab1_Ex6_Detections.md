@@ -105,12 +105,12 @@ Event
 
 17.  可从这里继续生成检测规则，但该 KQL 语句似乎可在其他检测规则的 KQL 语句中重复使用。  
     
-在“日志”窗口中，选择 **“保存”**，然后再选择 **“保存”**。
+在“日志”窗口中，选择 **“保存”**，然后再选择 **“保存”**。<br>
 在“保存”弹出窗口中，输入以下内容：
 
-名称： Event_Reg_SetValue
-另存为：函数
-函数别名：Event_Reg_SetValue
+名称： Event_Reg_SetValue<br>
+另存为：函数<br>
+函数别名：Event_Reg_SetValue<br>
 类别：Sysmon
 
 

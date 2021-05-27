@@ -28,6 +28,7 @@
 
 8. 在新查询 1 区域输入以下 KQL 语句：
 
+```
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -37,11 +38,13 @@ DeviceEvents
 | summarize count() by bin(TimeGenerated, 3m), c2
 | where count_ > 5
 | render timechart 
+```
 
 9. 该语句是为了提供一个可视化效果，用于在一致基础上检查 C2 信标输出。  花点时间将 “3 分钟”设置调整为 30 秒或更长时间。  将 count_ > 5 设置更改为其他阈值计数来观察影响。
 
 10. 你现已确定要向 C2 服务器发送信标的 DNS 请求。  接下来，请确定要发送信标的设备。  输入以下 KQL 语句：
 
+```
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -50,6 +53,7 @@ DeviceEvents
 | where c2 startswith "sub"
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
+```
 
 **请注**意，生成日志数据仅来自一台设备。
 
@@ -59,6 +63,7 @@ DeviceEvents
 
 13. 对于查询，输入以下 KQL 语句：
 
+```
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -67,6 +72,7 @@ DeviceEvents
 | where c2 startswith "sub"
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
+```
 
 14. 对于名称，输入 *“C2 搜寻”* 类型
 
