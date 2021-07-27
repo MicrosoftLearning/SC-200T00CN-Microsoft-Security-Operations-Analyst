@@ -7,9 +7,9 @@
 
 在此任务中，你将访问 Log Analytics 环境，可在其中练习编写 KQL 语句。
 
-1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
+1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd****。  
 
-2. 在浏览器中转到 https://aka.ms/lademo 使用 MOD 管理员凭据登录。 
+2. 在浏览器中转到 https://aka.ms/lademo。使用 MOD 管理员凭据登录。 
 
 3. 浏览屏幕左侧选项卡中列出的可用表。
 
@@ -34,7 +34,6 @@ let discardEventId = 4688;
 SecurityEvent
 | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
 | where EventID != discardEventId
-
 ```
 
 2. 以下语句演示了将 let 语句用于声明动态列表的用法。在查询窗口中，输入以下语句，然后选择 **“运行”**： 
@@ -56,9 +55,9 @@ let LowActivityAccounts =
     | summarize cnt = count() by Account 
     | where cnt < 10;
 LowActivityAccounts | where Account contains "Mal"
-
 ```
-**备注:** 运行此脚本时，应该不会获得任何结果。
+
+**备注：** 运行此脚本时，应该不会获得任何结果。
 
 4. 以下语句演示了查询窗口中显示的在所有表和列中搜索查询时间范围内的记录。在运行此脚本之前，在查询窗口中，将时间范围更改为“过去一小时”。输入以下语句并选择 **“运行”**： 
 
@@ -77,7 +76,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 
 6. 以下语句演示了使用 where 运算符的筛选器。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
-**备注:** 在下面的每个代码块中输入查询后，你应该“运行”。
+**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
 
 ```KQL
 SecurityEvent
@@ -87,7 +86,6 @@ SecurityEvent
 ```KQL
 SecurityEvent
 | where TimeGenerated > ago(1h) and EventID == "4624"
-
 ```
 
 ```KQL
@@ -95,7 +93,6 @@ SecurityEvent
 | where TimeGenerated > ago(1h)
 | where EventID == 4624
 | where AccountType =~ "user"
-
 ```
 
 ```KQL
@@ -115,7 +112,6 @@ SecurityAlert
     AlertSeverity == "Low", 1,
     AlertSeverity == "Informational", 0,
     -1)
-
 ```
 
 
@@ -133,10 +129,9 @@ Syslog
 | where HTTP_Status_Code == "200"
 | where Domain contains "."
 | where Domain has_any (DomainList)
-
 ```
 
-**备注:** 运行此脚本时，应该不会获得任何结果。
+**备注：** 运行此脚本时，应该不会获得任何结果。
 
 9. 以下语句演示了如何使用 order by 运算符对结果进行排序。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -151,12 +146,11 @@ SecurityAlert
     AlertSeverity == "Informational", 0,
     -1)
 | order by severityOrder desc
-
 ```
 
 10. 以下语句演示如何使用 project 运算符为结果集指定字段。
 
-**备注:** 在下面的每个代码块中输入查询后，你应该“运行”。
+**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
 
 在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -164,8 +158,6 @@ SecurityAlert
 ```KQL
 SecurityEvent
 | project Computer, Account
-
-
 ```
 
 
@@ -181,9 +173,6 @@ SecurityAlert
     -1)
 | order by severityOrder
 | project-away severityOrder
-
-
-
 ```
 
 ### 任务 3： 使用 Summarize 运算符分析 KQL 中的结果
@@ -198,7 +187,6 @@ SecurityAlert
 SecurityEvent
 | where EventID == "4688"
 | summarize count() by Process, Computer
-
 ```
 
 
@@ -210,7 +198,6 @@ SecurityEvent
 | where TimeGenerated > ago(1h)
 | where EventID == 4624
 | summarize cnt=count() by AccountType, Computer
-
 ```
 
 
@@ -221,7 +208,6 @@ SecurityEvent
 ```KQL
 SecurityEvent
 | summarize dcount(IpAddress)
-
 ```
 
 4. 下面的语句是一个 Azure Sentinel 分析规则，用于检测密码喷射尝试。
@@ -238,10 +224,9 @@ SigninLogs
 | where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
 | summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
 | where applicationCount >= threshold
-
-
 ```
-**备注:** 运行此脚本时，应该不会获得任何结果。
+
+**备注：** 运行此脚本时，应该不会获得任何结果。
 
 5. 以下语句演示了 arg_max 函数。
 
@@ -252,7 +237,6 @@ SigninLogs
 SecurityEvent 
 | where Computer == "SQL12.na.contosohotels.com"
 | summarize arg_max(TimeGenerated,*) by Computer
-
 ```
 
 6. 以下语句演示了 arg_min 函数。
@@ -264,17 +248,15 @@ SecurityEvent
 SecurityEvent 
 | where Computer == "SQL12.na.contosohotels.com"
 | summarize arg_min(TimeGenerated,*) by Computer
-
 ```
 
-7. 以下语句演示了根据竖线 “|” 顺序理解结果的重要性。在查询窗口中，输入以下语句并分别运行： 
+7. 以下语句演示了根据竖线“|”顺序理解结果的重要性。在查询窗口中，输入以下语句并分别运行： 
 
 语句 1
 ```KQL
 SecurityEvent
 | summarize arg_max(TimeGenerated, *) by Account
 | where EventID == "4624"
-
 ```
 
 语句 2
@@ -282,8 +264,8 @@ SecurityEvent
 SecurityEvent
 | where EventID == "4624"
 | summarize arg_max(TimeGenerated, *) by Account
-
 ```
+
 语句 1 将具有最后一个活动是登录的帐户。
 
 首先汇总 SecurityEvent 表并返回每个帐户的最新行。  然后，将只返回 EventID 等于 4624（登录）的行。
@@ -302,7 +284,6 @@ SecurityEvent 表将被筛选为仅包含 EventID = 4624。然后，将按帐户
 SecurityEvent
 | where EventID == "4624"
 | summarize make_list(Account) by Computer
-
 ```
 
 9. 以下语句演示了 make_list 函数。
@@ -314,7 +295,6 @@ make_list 返回一个包含表达式在组中采用的非重复值的动态 (JS
 SecurityEvent
 | where EventID == "4624"
 | summarize make_set(Account) by Computer
-
 ```
 
 ### 任务 4： 使用 Render 运算符以 KQL 创建可视化效果
@@ -327,18 +307,16 @@ SecurityEvent
 SecurityEvent 
 | summarize count() by Account
 | render barchart
-
 ```
 
 2. 以下语句演示了使用时序直观呈现结果的 render 函数。
 
-bin() 函数将值向下舍入为给定装箱大小的整数倍数。  经常与汇总依据一起使用....如果你有一组分散的值，则这些值将分组为更小的一组特定值。  将生成的时序和 render 运算符的管道与一种时间图表类型结合，可以提供时序可视化效果。在查询窗口中，输入以下语句并选择 **“运行”**： 
+bin() 函数将值向下舍入为给定装箱大小的整数倍数。  经常与汇总依据一起使用…如果你有一组分散的值，则这些值将分组为更小的一组特定值。  将生成的时序和 render 运算符的管道与一种时间图表类型结合，可以提供时序可视化效果。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
 ```KQL
 SecurityEvent 
 | summarize count() by bin(TimeGenerated, 1d) 
 | render timechart
-
 ```
 
 ### 任务 5： 使用 KQL 生成多表语句
@@ -362,8 +340,6 @@ SecurityEvent
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
-
-
 ```
 
 查询 2
@@ -372,16 +348,13 @@ SecurityEvent
 | union SecurityAlert  
 | summarize count() 
 | project count_
-
-
 ```
+
 查询 3
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
 | project count_
-
-
 ```
 
 2. 以下语句演示了 union 运算符对通配符的支持，以联合多个表。在查询窗口中，输入以下语句并选择 **“运行”**： 
@@ -390,7 +363,6 @@ SecurityEvent
 ```KQL
 union Security* 
 | summarize count() by Type
-
 ```
 
 
@@ -408,8 +380,6 @@ SecurityEvent
      | summarize LogOffCount=count() by EventID, Account 
      | project LogOffCount, Account 
 ) on Account
-
-
 ```
 
 联接中指定的第一个表被看作是左表。  联接关键字后面的表被看作是右表。  处理表中的列时，名称 $left.Column 和 $right.Column 用于区分正在引用哪个表的列。 
@@ -443,7 +413,6 @@ SecurityEvent
 | extend Account_Name = iff(Name in (top5), Name, "Other")
 | where Account_Name != ""
 | summarize Attempts = count() by Account_Name
-
 ```
 
 3. 以下语句演示了 parse 函数。  计算字符串表达式并将其值分析为一个或多个计算列。对于未成功分析的字符串，计算列的值将为 null。
@@ -501,7 +470,6 @@ let successLogon = SQlData
 (union isfuzzy=true
 Sqlactivity, FailedLogon, dbfailedLogon, successLogon )
 | project TimeGenerated, Computer, EventID, Action, ClientIP, LogonResult, CurrentUser, Reason, DatabaseName, ObjectName, Statement
-
 ```
 
 4. 以下语句演示了如何使用动态字段：
@@ -509,17 +477,16 @@ Sqlactivity, FailedLogon, dbfailedLogon, successLogon )
 Log Analytics 表中有一个定义为“动态”的字段类型。  动态字段包含键值对，如：
 {"eventCategory":"Autoscale","eventName":"GetOperationStatusResult","operationId":"xxxxxxxx-6a53-4aed-bab4-575642a10226","eventProperties":"{\"OldInstancesCount\":6,\"NewInstancesCount\":5}","eventDataId":" xxxxxxxx -efe3-43c2-8c86-cd84f70039d3","eventSubmissionTimestamp":"2020-11-30T04:06:17.0503722Z","resource":"ch-appfevmss-pri","resourceGroup":"CH-RETAILRG-PRI","resourceProviderValue":"MICROSOFT.COMPUTE","subscriptionId":" xxxxxxxx -7fde-4caf-8629-41dc15e3b352","activityStatusValue":"Succeeded"}
 
-若要访问动态字段中的字符串，请使用点表示法。  AzureActivity 表中的 “Properties_d” 字段属于动态类型。在此示例中，可以使用 “Properties_d.eventCategory” 字段名称访问 eventCategory。
+若要访问动态字段中的字符串，请使用点表示法。  AzureActivity 表中的“Properties_d”字段属于动态类型。在此示例中，可以使用“Properties_d.eventCategory”字段名称访问 eventCategory。
 
 在查询窗口中，输入以下语句并**运行**： 
 
 ```KQL
 AzureActivity
 | project Properties_d.eventCategory
-
 ```
 
-**备注:** 运行此脚本时，应该不会获得任何结果。
+**备注：** 运行此脚本时，应该不会获得任何结果。
 
 仅查看以下语句，但不要运行： 
 
@@ -535,7 +502,6 @@ SigninLogs
 | extend Date = startofday(TimeGenerated), Hour = datetime_part("Hour", TimeGenerated)
 | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails, ConditionalAccessPol0Name, ConditionalAccessPol0Result, ConditionalAccessPol1Name, ConditionalAccessPol1Result, ConditionalAccessPol2Name, ConditionalAccessPol2Result, Location, State, City
 | sort by Date
-
 ```
 
 5. 以下语句演示了用于操作存储在字符串字段中的 JSON 的函数。许多日志以 JSON 格式提交数据，这要求了解如何将 JSON 数据转换为可查询字段。 
@@ -547,14 +513,12 @@ SecurityAlert
 | extend ExtendedProperties = todynamic(ExtendedProperties) 
 | extend ActionTaken = ExtendedProperties.ActionTaken
 | extend AttackerIP = ExtendedProperties["Attacker IP"]
-
 ```
 
 
 ```KQL
 SecurityAlert
 | mv-expand entity = todynamic(Entities)
-
 ```
 
 
@@ -563,7 +527,6 @@ SecurityAlert
 | where TimeGenerated >= ago(7d)
 | mv-apply entity = todynamic(Entities) on 
 ( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
-
 ```
 
 6. 分析程序是定义虚拟表（具有已分析的非结构化字符串字段，例如 Syslog 数据）的函数。下面是社区为邮箱转发监视创建的 KQL 查询。  
@@ -601,8 +564,6 @@ OfficeActivity
                 'All Mail')))
     | project TimeGenerated, Operation, RuleName, RuleParameters, iif(details contains 'ForwardTo', ForwardTo, RedirectTo), ClientIP, UserId
     | project-rename Email_Forwarded_To = Column1, Creating_User = UserId
-
-
 ```
 
 若要创建函数：
@@ -611,7 +572,7 @@ OfficeActivity
 
 通过使用函数别名，该功能将以 KQL 提供：
 
-**备注:** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
+**备注：** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
 
 ```KQL
 MailboxForward
