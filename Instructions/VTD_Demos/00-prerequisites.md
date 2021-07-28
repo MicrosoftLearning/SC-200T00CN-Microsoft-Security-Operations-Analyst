@@ -66,7 +66,7 @@
 
 在此任务中，你需要将设备加入 Microsoft Defender for Endpoint。
 
-1. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)，并使用**租户电子**邮件凭据登录（如果当前不在该门户中）。
+1. 转到 Microsoft Defender 安全中心 (https://securitycenter.microsoft.com)，并使用 **租户电子** 邮件凭据登录（如果当前不在该门户中）。
 
 2. 从左侧菜单栏中选择 **“设置”**。
 
