@@ -6,7 +6,7 @@
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
-2. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
+2. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者提供的**租户电子**邮件帐户，然后选择 **“下一步”**。
 
 3. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
@@ -28,24 +28,22 @@
 
 12. 对于规则查询，粘贴以下 KQL 语句：
 
-```
- SigninLogs
- | where ResultType == "50057"
- | where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
- | summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
- applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
- | extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```KQL
+SigninLogs
+| where ResultType == "50057"
+| where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
+| summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
+applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
+| extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
 ```
 
 **警告：** 对虚拟机使用粘贴功能时。  可能添加额外的 | （竖线）字符。  确保粘贴的内容类似以下 KQL 语句。
 
-**备注:** 如果选择“查看查询结果”的链接，应该不会接收到任何结果。  你应该也不会收到错误。  
+**备注：** 如果选择“查看查询结果”的链接，应该不会接收到任何结果。  你应该也不会收到错误。  
 
 13. 查看“映射”条目。  实体在查询中显示为已映射，因为查询输出包括以下字段：
 
-```
- timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
-```
+timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
 
 14. 回到“查询计划”区域的“分析规则向导 - 创建新规则”边栏选项卡，为“运行查询间隔”选项输入 **“5”** 并选择 **“分钟”**。
 
@@ -53,7 +51,7 @@
 
 16. 对于“警报阈值”区域，不更改任何选项。
 
-**备注:** 最佳做法是在 KQL 查询语句中管理阈值。
+**备注：** 最佳做法是在 KQL 查询语句中管理阈值。
 
 17. 对于“事件分组”区域，保持选中 **“将所有事件分组到一个警报中”**。
 
@@ -89,13 +87,13 @@
 
 8. 关闭浏览器。
 
-9. 打开浏览器并导航到 https://portal.office.com， 然后尝试使用用户 ChristieC@**租户电子邮件域**登录，密码应与管理员的租户密码相同。  你应接收到警告称将会锁定帐户。
+9. 打开浏览器并导航到 https://portal.office.com，然后尝试使用用户 ChristieC@**租户电子邮件域**登录，密码应与管理员的租户密码相同。  你应接收到警告称将会锁定帐户。
 
 10. 关闭浏览器。等待 10 分钟以便警报处理。
 
-11.  在 Microsoft Edge 浏览器中，转到 Azure 门户 (https://portal.azure.com)
+11.  在 Edge 浏览器中，转到 Azure 门户 (https://portal.azure.com)。
 
-12. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者为管理员用户提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
+12. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者为管理员用户提供的**租户电子**邮件帐户，然后选择 **“下一步”**。
 
 13. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者为管理员用户提供的**租户密码**，然后选择 **“登录”**。
 
