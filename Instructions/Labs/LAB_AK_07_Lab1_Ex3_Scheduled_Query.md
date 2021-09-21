@@ -37,7 +37,7 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 | extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
 ```
 
-**警告：**对虚拟机使用粘贴功能时。  可能添加额外的 | （竖线）字符。  确保粘贴的内容与上面的 KQL 语句类似。
+**警告：** 对虚拟机使用粘贴功能时。  可能添加额外的 | （竖线）字符。  确保粘贴的内容与上面的 KQL 语句类似。
 
 **备注：** 如果选择“查看查询结果”的链接，应该不会接收到任何结果。  你应该也不会收到错误。  
 
