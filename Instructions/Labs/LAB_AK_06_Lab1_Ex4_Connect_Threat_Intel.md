@@ -6,7 +6,7 @@
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
-2. 在 Microsoft Edge 浏览器中，通过 https://portal.azure.com 导航到 Azure 门户。
+2. 在 Microsoft Edge 浏览器中，导航到 Azure 门户 (https://portal.azure.com)。
 
 3. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
 
@@ -16,11 +16,11 @@
 
 6. 选择之前创建的 Azure Sentinel 工作区。
 
-7. 从“数据连接器”选项卡，选择 **“威胁情报 - TAXII (预览版)”** 连接器。
+7. 在“数据连接器”选项卡中，选择 **“威胁情报 - TAXII”** 连接器。
 
 8. 在连接器信息边栏选项卡上选择 **“打开连接器页面”**。
 
-9. 在“配置”区域，输入 *PhishURLs* 作为友好名称
+9. 在“配置”区域的 **“(服务器)易记名称”** 处输入 *“PhishURLs”*
 
 10. 输入 https://limo.anomali.com/api/v1/taxii2/feeds/ 作为 API 根 URL
 
@@ -32,6 +32,6 @@
 
 14. 限制选择 **“添加”** 按钮。
 
-将拉取钓鱼 URL 并用其填充 ThreatIntelligenceIndicator 表。 
+将拉取钓鱼 URL 并用其填充 ThreatIntelligenceIndicator 表。
 
 ## 你已完成本实验室。
