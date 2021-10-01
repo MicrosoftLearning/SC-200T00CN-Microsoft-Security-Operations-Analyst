@@ -122,14 +122,16 @@
 
 5. 输入 *cd \sysmon*
 
-6. 加入 *notepad sysmon.xml* 以创建新文件。
+6. 键入“*notepad sysmon.xml*”以创建新文件。
 
 7. 在浏览器中打开选项卡，并导航到 https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-8. 将该文件的内容从 Github 复制到你刚创建的 sysmon.xml 记事本文件，并保存文件。
+8. 选择“**原始**”按钮并将该文件的内容从 Github 复制到刚创建的 sysmon.xml 记事本文件中，然后“**保存**”文件。
 
 9. 在命令提示符中键入以下命令，并按 Enter：
     sysmon.exe -accepteula -i sysmon.xml
+
+**备注：**  验证输出中是否出现“已验证配置文件”和“已启动 Sysmon”消息。
 
 10. 在浏览器中，导航到 Azure 门户 (https://portal.azure.com) 
 
@@ -145,7 +147,7 @@
 
 16. 选择 **“添加 Windows 事件日志”** 按钮。
 
-17. 在“日志名称”字段输入 **Microsoft-Windows-Sysmon/Operational**。
+17. 在“日志名称”字段中键入“**Microsoft-Windows-Sysmon/Operational**”。
 
 18. 选择“**应用**”。
 
@@ -153,7 +155,7 @@
 
 在此任务中，你需要将设备加入 Microsoft Defender for Endpoint。
 
-**备注：** 如果你完成了本课程第一个模块中的实验室，则你已执行此任务。  如果使用的是该实验室练习中使用的虚拟机，则可以跳过此任务。
+**备注：** 如果你完成了本课程第一个模块中的实验室并保存了虚拟机，则已经完成了这项任务。  如果使用的是该实验室练习中使用的虚拟机，则可以跳过此任务。
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
