@@ -1,4 +1,4 @@
-﻿# 模块 1 - 实验室 1 - 练习 1 - 探索 Microsoft 365 Defender 
+# 模块 1 - 实验室 1 - 练习 1 - 探索 Microsoft 365 Defender 
 
 ## 实验室场景
 
