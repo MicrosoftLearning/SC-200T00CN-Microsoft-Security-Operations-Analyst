@@ -1,4 +1,4 @@
-﻿# 模块 2 - 实验室 1 - 练习 1 - 部署 Microsoft Defender for Endpoint
+# 模块 2 - 实验室 1 - 练习 1 - 部署 Microsoft Defender for Endpoint
 
 ## 实验室场景
 

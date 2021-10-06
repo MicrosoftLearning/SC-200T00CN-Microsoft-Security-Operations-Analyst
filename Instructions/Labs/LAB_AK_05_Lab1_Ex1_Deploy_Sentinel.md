@@ -1,4 +1,4 @@
-﻿# 模块 5 - 实验室 1 - 练习 1 - 配置 Azure Sentinel 环境
+# 模块 5 - 实验室 1 - 练习 1 - 配置 Azure Sentinel 环境
 
 ## 实验室场景
 
