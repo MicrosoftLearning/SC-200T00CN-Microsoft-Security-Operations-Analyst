@@ -1,4 +1,4 @@
-﻿# 模块 6 - 实验室 1 - 练习 3 - 使用数据连接器将 Linux 主机连接到 Azure Sentinel
+# 模块 6 - 实验室 1 - 练习 3 - 使用数据连接器将 Linux 主机连接到 Azure Sentinel
 
 ### 任务 1：访问 Azure Sentinel 工作区。
 
@@ -28,25 +28,30 @@
 
 3. 将 *“1.2 在 Linux 计算机上安装 CEF 收集器”* 中显示的命令复制到剪贴板。
 
-4. 后续步骤特定于从实验室环境中的虚拟机复制内容的限制。在浏览器中，导航到 https://outlook.office.com
+4. 启动 LIN1 虚拟机，并使用实验室主机托管服务提供商提供的用户名和密码登录。请注意 LIN1 服务器的 IP 地址。以下面的屏幕截图为例：
 
-5. 创建发送给 *MOD 管理员*新消息。
+   ![linux 登录](../Media/LinuxLoginExample.png)
 
-6. 粘贴从连接器页面复制的剪贴板命令，并发送电子邮件消息。
+5. 回到 WIN1 虚拟机，并以管理员身份启动 Windows PowerShell。
 
-7. 在本地（而不是实验室虚拟机中）打开 InPrivate 浏览器会话，并导航到 https://outlook.office.com
+6. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
-8. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
+```PowerShell
+ssh <insert your linux IP address here> -l <insert linux user name here>
+```
 
-9. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
+7. 当 PowerShell 提示输入用户密码时，输入密码并按 Enter。  屏幕应如下所示：
 
-10. 复制你通过电子邮件发送给自己的命令。
+   ![linux 登录](../Media/PSconnectLinux.png)
 
-11. 以 root 身份使用密码 **Passw0rd!** 或实验室提供者为你分配的 Linux 计算机凭据登录到 LIN1 虚拟机。
+8. 现在可以粘贴前面的步骤“*1.2 在 Linux 计算机上安装 CEF 收集器*”中的命令。确保来自 Azure 的脚本在剪贴板中。在 PowerShell 中右键单击顶部栏并依次选择“**编辑**”、“**粘贴**”。粘贴后，添加“**3**”到单词“*python*”中，如下所示：
 
-12. 在终端窗口中粘贴命令。
+   ![连接器脚本](../Media/ConnectorScript.png)
 
-13. 在命令中看到 “python” 时，将其改为 “python3” 并按 Enter 以执行命令。
+
+9. 粘贴并调整脚本后，按 Enter。该脚本将在 Linux 服务器上远程运行。如果脚本处理得当，它应如以下屏幕所示：
+
+   ![连接器脚本](../Media/LinuxConnected.png)
 
 ### 任务 3：使用 Syslog 连接器连接 Linux 主机。
 
@@ -66,23 +71,25 @@
 
 7. 将 *“下载和加入适用于 Linux 的代理”* 区域中的命令复制到剪贴板。
 
-8. 后续步骤特定于从实验室环境中的虚拟机复制内容的限制。在浏览器中，导航到 https://outlook.office.com
+8. 启动 LIN2 虚拟机，并使用实验室主机托管服务提供商提供的用户名和密码登录。请注意 LIN2 服务器的 IP 地址。以下面的屏幕截图为例：
 
-9. 创建发送给 *MOD 管理员*新消息。
+   ![linux 登录](../Media/LinuxLoginExample.png)
 
-10. 将从连接器页面复制的剪贴板命令粘贴到电子邮件正文，然后将电子邮件发送给自己。
+9. 回到 WIN1 虚拟机，并以管理员身份启动 Windows PowerShell。
 
-11. 在本地（而不是实验室虚拟机中）打开浏览器，并导航到 https://outlook.office.com
+10. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
-12. 在 **“登录”** 对话框中，复制粘贴实验室托管提供者提供的**租户电子邮件**帐户，然后选择 **“下一步”**。
+```PowerShell
+ssh <insert your linux IP address here> -l <insert linux user name here>
+```
 
-13. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
+11. 当 PowerShell 提示输入用户密码时，输入密码并按 Enter。  屏幕应如下所示：
 
-14. 复制你通过电子邮件发送给自己的命令。
+   ![linux 登录](../Media/PSconnectLinux.png)
 
-15. 以 *root* 身份使用密码 **Passw0rd!** 或实验室提供者为你分配的 Linux 计算机凭据登录到 LIN2 虚拟机。  
+12. 现在可以粘贴前面的步骤“*下载和加入适用于 Linux 的代理*”中的命令。确保来自 Azure 的脚本在剪贴板中。在 PowerShell 中右键单击顶部栏并依次选择“**编辑**”、“**粘贴**”。
 
-16. 在终端窗口中粘贴命令，并按 **Enter**。 你已完成本任务。本课程中其他实验室均不会依赖于此连接。
+13. 粘贴脚本后，按 Enter。该脚本将在 Linux 服务器上远程运行。你已完成本任务。本课程中其他实验室均不会依赖于此连接。
 
 ### 任务 4：为 Syslog 连接器配置你想收集的设备及其严重性。
 

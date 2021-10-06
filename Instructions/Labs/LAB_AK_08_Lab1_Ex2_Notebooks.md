@@ -22,7 +22,7 @@
 
 7. 在 Azure Sentinel 工作区中，选择 **“笔记本”**。
 
-8. 接下来，需要选择 AzureML 工作区。在命令栏中，选择 **“创建新 AML 工作区”** 按钮。
+8. 接下来，需要选择 AzureML 工作区。从命令栏的下拉菜单中，选择“**创建新 AML 工作区**”。
 
 9. 在“订阅”框中，选择自己的订阅。
 
@@ -42,7 +42,7 @@
 
 14. 选择 **“笔记本”**。 
 
-15. 选择 **“Azure Sentinel ML 笔记本入门指南”**，然后选择 **“保存笔记本”** 按钮。  在笔记本名称弹出菜单中，保留默认值并选择 **“确定”**。
+15. 选择“**Azure Sentinel ML 笔记本入门指南**”，然后选择“**克隆笔记本模板**”按钮。  在笔记本名称弹出菜单中，保留默认值并选择“**确定**”。
 
 16. 选择 **“发布笔记本”** 按钮。
 
@@ -56,6 +56,6 @@
 
 21. 遵循入门教程。
 
-**备注** 如果无法完成上述步骤来访问笔记本，可以改为在其 GitHub 页上查看。  在这里查看笔记本文件：[GitHub 上的 Azure Sentinal 笔记本](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
+**备注** 如果无法完成上述步骤来访问笔记本，可以改为在其 GitHub 页上查看。  在此处查看笔记本文件：[GitHub 上的 Azure Sentinal 笔记本](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 
 ## 你已完成本实验室。

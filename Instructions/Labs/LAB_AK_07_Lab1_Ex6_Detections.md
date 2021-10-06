@@ -32,13 +32,15 @@ search "temp\\startup.bat"
 ```
 
 10. 针对 3 个不同的表显示结果：
-    DeviceProcessEvents
-    DeviceRegistryEvents
-    Event
+    - DeviceProcessEvents
+    - DeviceRegistryEvents
+    - Event
 
-    设备*表来自 Defender for Endpoint（数据连接器 - Microsoft 365 Defender）。  事件来自数据连接器安全事件。 
+    *设备*表来自 Defender for Endpoint（数据连接器 - Microsoft 365 Defender）。  *事件*来自数据连接器安全事件。 
 
     我们将接收来自两个不同源（Sysmon 和 Defender for Endpoint）的数据，因此需要生成两个之后可联合的 KQL 语句。  初次调查时，你将分别查看每份数据。
+
+    **备注：** 在极少数情况下，数据加载过程可能需要比正常情况更长的加载时间。  发生这种情况时，这些表可能在几个小时内都不会出现在查询中。
 
 11. 第一个数据源是 Windows 主机中的 Sysmon。  运行以下 KQL 语句。
 

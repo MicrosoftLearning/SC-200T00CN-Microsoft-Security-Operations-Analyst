@@ -1,4 +1,4 @@
-﻿# 模块 4 - 实验室 1 - 练习 1 - 使用 Kusto 查询语言 (KQL) 为 Azure Sentinel 创建查询
+# 模块 4 - 实验室 1 - 练习 1 - 使用 Kusto 查询语言 (KQL) 为 Azure Sentinel 创建查询
 
 ## 实验室场景
 你是一位安全运营分析师，你所在公司正在实现 Azure Sentinel。你负责执行日志数据分析，以便搜索恶意活动、显示可视化效果并执行威胁搜寻。为了查询日志数据，你使用 Kusto 查询语言 (KQL)。
@@ -24,6 +24,8 @@ SecurityEvent
 ### 任务 2：运行基本的 KQL 语句
 
 在此任务中，你将生成基本的 KQL 语句。
+
+**备注：**  对于每个步骤，都应先从查询窗口中清除之前的语句，或是在最后打开的选项卡之后选择“**+**”打开一个新的查询窗口（最多 25 个）。
 
 1. 下面的语句演示了将 let 语句用于声明变量的用法。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -59,13 +61,13 @@ LowActivityAccounts | where Account contains "Mal"
 
 **备注：** 运行此脚本时，应该不会获得任何结果。
 
-4. 以下语句演示了查询窗口中显示的在所有表和列中搜索查询时间范围内的记录。在运行此脚本之前，在查询窗口中，将时间范围更改为“过去一小时”。输入以下语句并选择 **“运行”**： 
+4. 以下语句演示了查询窗口中显示的在所有表和列中搜索查询时间范围内的记录。运行此脚本前，在查询窗口中将“时间范围”更改为“**过去 1 小时**”。输入以下语句并选择“**运行**”： 
 
 ```KQL
 search "err"
 ```
 
-**警告：**请务必在后续脚本中将时间范围改回“过去 24 小时”。
+**警告：** 请务必在后续脚本中将时间范围改回“过去 24 小时”。
 
 5. 以下语句演示了查询窗口中显示的在所有通过“in”子句中列出的表中搜索查询时间范围内的记录。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -250,33 +252,29 @@ SecurityEvent
 | summarize arg_min(TimeGenerated,*) by Computer
 ```
 
-7. 以下语句演示了根据竖线“|”顺序理解结果的重要性。在查询窗口中，输入以下语句并分别运行： 
+7. 以下语句演示了根据竖线“|”顺序理解结果的重要性。在查询窗口中，输入以下查询并分别运行： 
 
-语句 1
+“**查询 1**”将提供最后一次活动为“登录”的帐户。首先汇总 SecurityEvent 表并返回每个帐户的最新行。  然后，将只返回 EventID 等于 4624（登录）的行。
+
 ```KQL
 SecurityEvent
 | summarize arg_max(TimeGenerated, *) by Account
 | where EventID == "4624"
 ```
 
-语句 2
+“**查询 2**”将提供已登录帐户的最新登录信息。将对 SecurityEvent 表进行筛选，使其仅包含 EventID = 4624。然后，将按帐户为最新登录行汇总这些结果。
+
 ```KQL
 SecurityEvent
 | where EventID == "4624"
 | summarize arg_max(TimeGenerated, *) by Account
 ```
 
-语句 1 将具有最后一个活动是登录的帐户。
-
-首先汇总 SecurityEvent 表并返回每个帐户的最新行。  然后，将只返回 EventID 等于 4624（登录）的行。
-
-语句 2 将具有已登录的帐户的最新登录。  
-
-SecurityEvent 表将被筛选为仅包含 EventID = 4624。然后，将按帐户为最新登录行汇总这些结果。
+**备注：**  也可以通过选择“已完成”栏来查看“总 CPU”和“用于已处理查询的数据”，并对两种语句之间的数据进行比较。
 
 8. 以下语句演示了 make_list 函数。
 
-该函数返回组中所有表达式值的动态 (JSON) 数组。此 KQL 查询将首先使用 where 运算符筛选 EventID。  接下来，对于每台计算机，结果都是帐户的 JSON 数组。生成的 JSON 数组将包含重复的帐户。
+make_list 函数返回一个动态 (JSON) 数组，该数组由组中表达式的所有值组成。此 KQL 查询将首先使用 where 运算符筛选 EventID。  接下来，对于每台计算机，结果都是帐户的 JSON 数组。生成的 JSON 数组将包含重复的帐户。
 
 在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -286,9 +284,9 @@ SecurityEvent
 | summarize make_list(Account) by Computer
 ```
 
-9. 以下语句演示了 make_list 函数。
+9. 以下语句演示了 make_set 函数。
 
-make_list 返回一个包含表达式在组中采用的非重复值的动态 (JSON) 数组。此 KQL 查询将首先使用 where 运算符筛选 EventID。  接下来，对于每台计算机，结果都是唯一帐户的 JSON 数组。在查询窗口中，输入以下语句并选择 **“运行”**： 
+make_set 函数返回一个动态 (JSON) 数组，该数组中包含表达式在组中采用的不同值。此 KQL 查询将首先使用 where 运算符筛选 EventID。  接下来，对于每台计算机，结果都是唯一帐户的 JSON 数组。在查询窗口中，输入以下语句并选择“**运行**”： 
 
 
 ```KQL
@@ -315,7 +313,7 @@ bin() 函数将值向下舍入为给定装箱大小的整数倍数。  经常与
 
 ```KQL
 SecurityEvent 
-| summarize count() by bin(TimeGenerated, 1d) 
+| summarize count() by bin(TimeGenerated, 1h) 
 | render timechart
 ```
 
@@ -323,26 +321,16 @@ SecurityEvent
 
 在此任务中，你将生成多表 KQL 语句。
 
-1. 以下语句演示了 union 运算符，该运算符采用两个或多个表，并返回所有表的行。有必要了解结果是如何通过竖线字符传递的，又是如何受到该字符影响的。根据“查询”窗口中设置的时间范围：
-
-查询 1 将返回 SecurityEvent 所有的行和 SecurityAlert 所有的行
-
-查询 2 将返回一行和一列，也就是 SecurityEvent 所有的行和 SecurityAlert 所有的行的计数
-
-查询 3 将返回 SecurityEvent 所有的行和 SecurityAlert 的一个行。  SecurityAlert 的行将具有 SecurityAlert 行的计数。
-
-分别运行每个查询以查看结果。 
-
-在查询窗口中，输入以下语句并对各语句选择 **“运行”**： 
+1. 以下语句演示了 union 运算符，该运算符采用两个或多个表，并返回所有表的行。有必要了解结果是如何通过竖线字符传递的，又是如何受到该字符影响的。在查询窗口中，输入以下语句，并分别针对每个语句选择“**运行**”以查看结果： 
 
 
-**查询 1**
+“**查询 1**”将返回 SecurityEvent 和 SecurityAlert 的所有行。
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
 ```
 
-**查询 2**
+“**查询 2**”将返回一行和一列，即 SecurityEvent 和 SecurityAlert 的所有行的计数。
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
@@ -350,7 +338,7 @@ SecurityEvent
 | project count_
 ```
 
-**查询 3**
+“**查询 3**”将返回 SecurityEvent 的所有行和 SecurityAlert 的其中一行。  SecurityAlert 的行将具有 SecurityAlert 行的计数。
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
@@ -569,11 +557,11 @@ OfficeActivity
 
 若要创建函数：
 
+**备注：** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
+
 运行查询后，选择 **“保存”** 按钮，输入名称：MailboxForward，然后从下拉列表中选择 **“另存为”** 函数。   
 
 通过使用函数别名，该功能将以 KQL 提供：
-
-**备注：** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
 
 ```KQL
 MailboxForward

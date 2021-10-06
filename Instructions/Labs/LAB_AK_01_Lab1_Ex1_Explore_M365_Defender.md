@@ -1,4 +1,4 @@
-﻿# 模块 2 - 实验室 1 - 练习 1 - 探索 Microsoft 365 Defender 
+# 模块 1 - 实验室 1 - 练习 1 - 探索 Microsoft 365 Defender 
 
 ## 实验室场景
 
@@ -10,9 +10,9 @@
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
-2. 打开浏览器，搜索、下载并安装新版 Microsoft Edge 浏览器（如果在之前的实验室中尚未这样做）。启动新的 Microsoft Edge 浏览器。
+2. 如果尚未在浏览器中访问 Microsoft 365 Defender 门户，请启动 Microsoft Edge 浏览器。
 
-3. 在 Microsoft Edge 浏览器中，转到 Microsoft Defender 安全中心 (https://security.microsoft.com)
+3. 在 Microsoft Edge 浏览器中，转到 Microsoft 365 Defender 门户 (https://security.microsoft.com)。
 
 4. 在 **“登录”** 对话框中，复制并粘贴实验室托管提供者为管理员用户名提供的租户电子邮件帐户，然后选择 **“下一步”**=。
 
