@@ -1,21 +1,21 @@
-# ģ�� 2 - ʵ���� 1 - ��ϰ 2 - ʹ�� Microsoft Defender for Endpoint ���⹥��
+﻿# 模块 2 - 实验室 1 - 练习 2 - 使用 Microsoft Defender for Endpoint 缓解攻击
 
-## ʵ���ҳ���
+## 实验室场景
 
-����һλ��ȫ��Ӫ����ʦ�������ڹ�˾����ʵ�� Microsoft Defender for Endpoint��������ܼƻ�����һЩ�豸���������˽ⰲȫ��Ӫ (SecOps) �Ŷ���Ӧ��������ĸ��ġ�
+你是一位安全运营分析师，你所在公司正在实现 Microsoft Defender for Endpoint。你的主管计划加入一些设备，以深入了解安全运营 (SecOps) 团队响应程序所需的更改。
 
-Ϊ��̽�� Defender for Endpoint �Ĺ������⹦�ܣ��㽫��������ģ�⹥����
+为了探索 Defender for Endpoint 的攻击缓解功能，你将运行两次模拟攻击。
 
-### ���� 1��ģ�⹥��
+### 任务 1：模拟攻击
 
-�ڴ������У��㽫��������ģ�⹥������̽�� Microsoft Defender for Endpoint �Ĺ��ܡ�
+在此任务中，你将运行两次模拟攻击，以探索 Microsoft Defender for Endpoint 的功能。
 
-1. �����δ��������з��� Microsoft 365 Defender �Ż�����������⻧����Ա���ݵ�¼�� Microsoft 365 Defender �Ż� (https://security.microsoft.com)��
+1. 如果尚未在浏览器中访问 Microsoft 365 Defender 门户，请访问以租户管理员身份登录的 Microsoft 365 Defender 门户 (https://security.microsoft.com)。
 
-2. �Ӳ˵��еġ��ս�㡱�£�ѡ��**�����ͽ̳�**����Ȼ������ѡ��**�̳̺�ģ��**����
+2. 从菜单中的“终结点”下，选择“**评估和教程**”，然后从左侧选择“**教程和模拟**”。
 
-3. ѡ�񡰽̡̳�ѡ����������Ϊ��**�Զ�����(���ų���)**����ģ�����Ϊ��**�Զ�����(���ļ�����)**���Ľ̡̳�ͨ��ѡ�����ִ��ģ���˵���ġ�**�Ķ�����**�����Ķ��̵̳��ĵ��� 
+3. 选择“教程”选项卡，并完成名为“**自动调查(后门程序)**”的模拟和名为“**自动调查(无文件攻击)**”的教程。通过选择包含执行模拟的说明的“**阅读演练**”来阅读教程的文档。 
 
-**����**���˴���ģ��ͽ̷̳ǳ��ʺ�ʵ��ʽѧϰ��  �Ż��лᶨ�����Ӻ��޸�ģ��ͽ̡̳�  �����в���ģ��ͽ̳̿��ܻ�Ӱ��Ϊ����ѵ�γ���Ƶ�ʵ���ҵ����ܡ�  ��ʹ�� Azure �⻧�ṩ�Ŀγ�ʱ�����ִ��Ϊ��ʵ�����ṩ��˵�����Ƽ���ģ��ͽ̡̳�  ʹ�ô��⻧��ɱ���ѵ�γ�*��*�����Բ�������ģ����⻧�̡̳�
+**警告**：此处的模拟和教程非常适合实践式学习。  门户中会定期添加和修改模拟和教程。  但其中部分模拟和教程可能会影响为本培训课程设计的实验室的性能。  在使用 Azure 租户提供的课程时，请仅执行为本实验室提供的说明中推荐的模拟和教程。  使用此租户完成本培训课程*后*，可以参与其他模拟和租户教程。
 
-## ������ɱ�ʵ���ҡ�
+## 你已完成本实验室。
