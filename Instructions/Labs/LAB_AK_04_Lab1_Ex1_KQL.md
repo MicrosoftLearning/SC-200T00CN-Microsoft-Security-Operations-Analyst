@@ -3,6 +3,9 @@
 ## 实验室场景
 你是一位安全运营分析师，你所在公司正在实现 Azure Sentinel。你负责执行日志数据分析，以便搜索恶意活动、显示可视化效果并执行威胁搜寻。为了查询日志数据，你使用 Kusto 查询语言 (KQL)。
 
+**提示：** 此实验室需要将大量 KQL 脚本输入到 Azure Sentinel 中。  如果你喜欢从文本文件粘贴脚本，在以下位置已为你提供该文件：  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
+
+
 ### 任务 1：访问 KQL 测试区域。
 
 在此任务中，你将访问 Log Analytics 环境，可在其中练习编写 KQL 语句。
