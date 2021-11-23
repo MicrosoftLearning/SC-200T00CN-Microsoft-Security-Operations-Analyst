@@ -51,7 +51,7 @@ search in (Event) "temp\\startup.bat"
 
 12. 展开各行可查看与记录相关的所有列。  一些字段（例如 EventData 和 ParameterXml）具有多个存储为结构化数据的数据项。  这使得很难对特定字段进行查询。  
 
-13. 接下来，我们需要生成一个可分析每行中数据的 KQL 语句，从而得到有意义的字段。  在 GitHub 上的 Azure Sentinel 社区中，“分析程序”文件夹中提供了很多分析程序示例。  在浏览器中打开另一个标签页，然后导航到：https://github.com/Azure/Azure-Sentinel
+13. 接下来，我们需要生成一个可分析每行中数据的 KQL 语句，从而得到有意义的字段。  在 GitHub 上的 Azure Sentinel 社区中，“分析程序”文件夹中提供了很多分析程序示例。  在浏览器中打开另一个标签页，然后导航到： **https://github.com/Azure/Azure-Sentinel**
 
 14. 选择 **“分析程序”** 文件夹，然后选择 **“Sysmon”** 文件夹。  应会看到以下内容：Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
 
