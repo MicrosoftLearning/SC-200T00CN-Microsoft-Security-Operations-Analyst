@@ -1,4 +1,4 @@
-﻿# 模块 3 - 实验室 1 - 练习 1 - 启用 Azure Defender
+# 模块 3 - 实验室 1 - 练习 1 - 启用 Azure Defender
 
 ## 实验室场景
 
