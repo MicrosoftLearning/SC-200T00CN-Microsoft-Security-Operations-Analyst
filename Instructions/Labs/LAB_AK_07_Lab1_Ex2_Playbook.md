@@ -1,4 +1,4 @@
-﻿# 模块 7 - 实验室 1 - 练习 2 - 创建 Playbook
+# 模块 7 - 实验室 1 - 练习 2 - 创建 Playbook
 
 ### 任务 1： 在 Microsoft Teams 中创建安全运营中心团队。
 
