@@ -1,4 +1,4 @@
-﻿# 模块 7 - 实验室 1 - 练习 2 - 创建 Playbook
+# 模块 7 - 实验室 1 - 练习 2 - 创建 Playbook
 
 ### 任务 1： 在 Microsoft Teams 中创建安全运营中心团队。
 
@@ -74,7 +74,7 @@
 
 2. 选择 Azure Sentinel 工作区。
 
-3. 从“配置”区域选择 **“自动化”**，然后选择 **“Playbooks”** 选项卡。
+3. 从“配置”区域选择“**自动化**”，然后选择“**可用 Playbook**”选项卡。
 
 4. 选择 **“PostMessageTeams-OnAlert”** playbook。
 
