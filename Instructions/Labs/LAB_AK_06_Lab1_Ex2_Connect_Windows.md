@@ -114,7 +114,7 @@
 
 1. 在浏览器中，转到 https://docs.microsoft.com/sysinternals/downloads/sysmon
 
-2. 在页面上，选择“**下载 Sysmon”**以下载 Sysmon。
+2. 在页面上，选择 **“下载 Sysmon”** 以下载 Sysmon。
 
 3. 打开下载文件并将文件提取到新目录 c:\sysmon
 
