@@ -4,17 +4,17 @@
 
 在此任务中，你将在配置了 Microsoft Defender for Endpoint 的主机执行攻击。
 
-1. 使用以下密码以管理员身份登录到 WIN1 虚拟机： **Pa55w.rd**。  
+1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
 2. 在任务栏的搜索框中，输入“*Command*”。  命令提示符将显示在搜索结果中。  右键单击命令提示符，并选择“**以管理员身份运行**”。在出现的“**用户帐户控件**”窗口中选择“**是**”，以允许应用运行。
 
-3. 在命令提示符中，在每一行中输入命令，并在每一行后按 Enter：
+3. 在命令提示符中，在每一行中输入命令，并在每一行后按 Enter 键：
 ```
 cd \
 mkdir temp
 cd temp
 ```
-4. 攻击 1 - 将此命令复制到命令提示符应用并运行此命令：
+4. 攻击 1 - 复制并运行此命令：
 
 ```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
