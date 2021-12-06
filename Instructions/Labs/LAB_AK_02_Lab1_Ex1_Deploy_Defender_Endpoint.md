@@ -33,7 +33,7 @@
 
 在此任务中，你需要使用加入脚本将设备加入 Microsoft Defender for Endpoint。
 
-1. 如果尚未在浏览器中访问 Microsoft 365 Defender 门户，请启动 Microsoft Edge 浏览器并转到该网站 (https://security.microsoft.com)，然后使用“**租户电子邮件**”凭据登录。
+1. 如果尚未在浏览器中访问 Microsoft 365 Defender 门户，请启动 Microsoft Edge 浏览器并转到该网站 (https://security.microsoft.com)， 然后使用“**租户电子邮件**”凭据登录。
 
 2. 从左侧菜单栏中选择“**设置**”，然后从“**设置**”页面中选择“**终结点**”。
 
