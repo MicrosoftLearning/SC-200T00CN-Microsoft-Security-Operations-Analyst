@@ -82,7 +82,7 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 10. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
 ```PowerShell
-ssh <在此处插入你的 linux IP 地址> -l <在此处插入 linux 用户名>
+ssh <insert your linux IP address here> -l <insert linux user name here>
 ```
 
 11. 输入“*是*”以确认连接，然后键入用户密码并按 Enter。屏幕应如下所示：
