@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '01 - 探索 Microsoft 365 Defender'
     module: '模块 01 - 使用 Microsoft 365 Defender 缓解威胁'
