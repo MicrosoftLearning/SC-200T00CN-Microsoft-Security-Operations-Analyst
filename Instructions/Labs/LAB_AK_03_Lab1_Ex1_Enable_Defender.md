@@ -1,4 +1,4 @@
-﻿# 模块 3 - 实验室 1 - 练习 1 - 启用 Microsoft Defender for Cloud
+# 模块 3 - 实验室 1 - 练习 1 - 启用 Microsoft Defender for Cloud
 
 ## 实验室场景
 
