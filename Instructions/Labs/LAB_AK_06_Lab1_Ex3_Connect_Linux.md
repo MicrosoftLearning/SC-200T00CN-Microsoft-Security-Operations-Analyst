@@ -32,7 +32,7 @@
 
    ![linux 登录](../Media/LinuxLoginExample.png)
 
-5. 回到 WIN1 虚拟机，并以管理员身份启动 Windows PowerShell。
+5. 返回到 WIN1 虚拟机，右键单击开始菜单图标以管理员身份启动 Windows PowerShell，然后选择“**Windows PowerShell (管理员)**”。选择“是”，允许应用在出现的“**用户帐户控制**”窗口中运行。
 
 6. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
@@ -40,7 +40,7 @@
 ssh <insert your linux IP address here> -l <insert linux user name here>
 ```
 
-7. 当 PowerShell 提示输入用户密码时，输入密码并按 Enter。  屏幕应如下所示：
+7. 输入“*是*”以确认连接，然后键入用户密码并按 Enter。屏幕应如下所示：
 
    ![linux 登录](../Media/PSconnectLinux.png)
 
@@ -75,7 +75,9 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
    ![linux 登录](../Media/LinuxLoginExample.png)
 
-9. 回到 WIN1 虚拟机，并以管理员身份启动 Windows PowerShell。
+9. 返回到 WIN1 虚拟机，右键单击开始菜单图标以管理员身份启动新的 Windows PowerShell，然后选择“**Windows PowerShell (管理员)**”。选择“是”，允许应用在出现的“用户帐户控制”窗口中运行。
+
+**备注**：如果通过输入“*退出*”关闭到 LIN1 的连接，完成了最后一个任务的安装，那么可重复使用 Windows PowerShell 窗口。
 
 10. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
@@ -83,7 +85,7 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 ssh <insert your linux IP address here> -l <insert linux user name here>
 ```
 
-11. 当 PowerShell 提示输入用户密码时，输入密码并按 Enter。  屏幕应如下所示：
+11. 输入“*是*”以确认连接，然后键入用户密码并按 Enter。屏幕应如下所示：
 
    ![linux 登录](../Media/PSconnectLinux.png)
 
@@ -107,9 +109,9 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
 6. 从 **“设备名称”** 下拉菜单中选择 **“auth”**。
 
-7. 选择 **“添加设备”** 按钮。
+7. 再次选择“**+ 添加设备**”按钮。
 
-8. 从 **“设备名称”** 下拉菜单中输入 **“authpriv”**。
+8. 从下拉菜单中选择“**authpriv**”作为*设备名称*。
 
 9. 选择 **“应用”**。  你已完成本任务。
 

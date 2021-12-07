@@ -1,12 +1,12 @@
-﻿# 模块 7 - 实验室 1 - 练习 4 - 连接检测建模
+# 模块 7 - 实验室 1 - 练习 4 - 连接检测建模
 
 ### 任务 1：了解攻击
 
-在此练习中你不会执行任何操作。  本练习将解释你将执行的攻击。
+**重要提示：在此练习中你不会执行任何操作。**  这些说明只是阐述你将在下一个练习中执行的攻击。请仔细阅读本页。
 
 攻击模式基于开源项目： https://github.com/redcanaryco/atomic-red-team
 
-**备注：** 为了方便演示实验室，某些设置触发的时间期限较短。
+**备注**：为了方便演示实验室，某些设置触发的时间期限较短。
 
 #### 攻击 1 - 通过注册表项添加实现的持久性攻击。
 
@@ -31,8 +31,6 @@ net localgroup administrators theusernametoadd /add
 此攻击将模拟命令和控制 (C2) 通信。
 
 ```PowerShell
-
-
 param(
     [string]$Domain = "microsoft.com",
     [string]$Subdomain = "subdomain",
@@ -43,43 +41,31 @@ param(
         [int]$C2Jitter = 20,
         [int]$RunTime = 240
 )
-
-
 $RunStart = Get-Date
 $RunEnd = $RunStart.addminutes($RunTime)
-
 $x2 = 1
 $x3 = 1 
 Do {
     $TimeNow = Get-Date
     Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
     if ($x2 -eq 3 )
     {
         Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-        
         $x2 = 1
-
     }
     else
     {
         $x2 = $x2 + 1
     }
-    
     if ($x3 -eq 7 )
     {
-
         Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
         $x3 = 1
-        
     }
     else
     {
         $x3 = $x3 + 1
     }
-
-
     $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
     Start-Sleep -Seconds $Jitter
 }
