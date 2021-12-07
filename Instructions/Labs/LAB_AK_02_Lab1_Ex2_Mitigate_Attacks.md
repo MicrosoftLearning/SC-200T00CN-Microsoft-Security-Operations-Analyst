@@ -1,4 +1,4 @@
-﻿# 模块 2 - 实验室 1 - 练习 2 - 使用 Microsoft Defender for Endpoint 缓解攻击
+# 模块 2 - 实验室 1 - 练习 2 - 使用 Microsoft Defender for Endpoint 缓解攻击
 
 ## 实验室场景
 

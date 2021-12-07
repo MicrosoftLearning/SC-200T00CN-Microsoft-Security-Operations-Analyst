@@ -1,4 +1,4 @@
-﻿# 模块 3 - 实验室 1 - 练习 2 -使用 Microsoft Defender for Cloud 缓解威胁
+# 模块 3 - 实验室 1 - 练习 2 -使用 Microsoft Defender for Cloud 缓解威胁
 
 ## 实验室场景
 
