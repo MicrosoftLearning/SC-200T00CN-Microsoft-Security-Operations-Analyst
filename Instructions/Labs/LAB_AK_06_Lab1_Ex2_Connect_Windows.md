@@ -1,4 +1,4 @@
-﻿# 模块 6 - 实验室 1 - 练习 2 - 使用数据连接器将 Windows 设备连接到 Azure Sentinel
+# 模块 6 - 实验室 1 - 练习 2 - 使用数据连接器将 Windows 设备连接到 Azure Sentinel
 
 ### 任务 1： 在 Azure 中创建 Windows 虚拟机。
 
