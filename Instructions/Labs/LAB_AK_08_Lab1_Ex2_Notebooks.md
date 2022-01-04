@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 2 - 结合使用笔记本和 Microsoft Sentinel 来搜寻威胁'
     module: '模块 8 - 在 Microsoft Sentinel 中执行威胁搜寻'
