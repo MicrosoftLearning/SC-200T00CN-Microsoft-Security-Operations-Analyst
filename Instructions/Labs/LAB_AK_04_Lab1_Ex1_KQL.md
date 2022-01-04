@@ -1,9 +1,15 @@
-# 模块 4 - 实验室 1 - 练习 1 - 使用 Kusto 查询语言 (KQL) 为 Azure Sentinel 创建查询
+﻿---
+lab:
+    title: '练习 1 - 使用 Kusto 查询语言 (KQL) 为 Microsoft Sentinel 创建查询'
+    module: '模块 4 - 使用 Kusto 查询语言 (KQL) 为 Microsoft Sentinel 创建查询'
+---
+
+# 模块 4 - 实验室 1 - 练习 1 - 使用 Kusto 查询语言 (KQL) 为 Microsoft Sentinel 创建查询
 
 ## 实验室场景
-你是一位安全运营分析师，你所在公司正在实现 Azure Sentinel。你负责执行日志数据分析，以便搜索恶意活动、显示可视化效果并执行威胁搜寻。为了查询日志数据，你使用 Kusto 查询语言 (KQL)。
+你是一位安全运营分析师，你所在公司正在实现 Microsoft Sentinel。你负责执行日志数据分析，以便搜索恶意活动、显示可视化效果并执行威胁搜寻。为了查询日志数据，你使用 Kusto 查询语言 (KQL)。
 
-**提示：** 此实验室需要将大量 KQL 脚本输入到 Azure Sentinel 中。在此实验室开始时，一个文件中提供了脚本。也可从以下位置进行下载：  https://github.com/MicrosoftLearning/SC-200T00CN-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
+>**提示**：此实验室需要将大量 KQL 脚本输入到 Microsoft Sentinel 中。这些脚本是在本实验室开始时以文件形式提供的。也可在以下位置下载它们：  https://github.com/MicrosoftLearning/SC-200T00CN-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
 
 
 ### 任务 1：访问 KQL 测试区域。
@@ -24,11 +30,12 @@ SecurityEvent
 
 5. 在第一条记录旁边，选择 **“>”** 以展开该行的信息。
 
+
 ### 任务 2：运行基本的 KQL 语句
 
 在此任务中，你将生成基本的 KQL 语句。
 
-**重要提示：** 对于每个查询，都应先从查询窗口中清除之前的语句，或者在最后打开的选项卡之后选择“**+**”打开一个新的查询窗口（最多 25 个）。
+>**重要提示：** 对于每个查询，都应先从查询窗口中清除之前的语句，或是在最后打开的选项卡之后选择“**+**”打开一个新的查询窗口（最多 25 个）。
 
 1. 下面的语句演示了将 let 语句用于声明变量的用法。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -66,7 +73,7 @@ LowActivityAccounts | where Account contains "sql"
 search "err"
 ```
 
-**警告：** 请务必在后续脚本中将时间范围改回“过去 24 小时”。
+>**警告：** 请务必在后续脚本中将时间范围改回“过去 24 小时”。
 
 5. 以下语句演示了查询窗口中显示的在所有通过“in”子句中列出的表中搜索查询时间范围内的记录。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
@@ -76,7 +83,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 
 6. 以下语句演示了使用 where 运算符的筛选器。在查询窗口中，输入以下语句并选择 **“运行”**： 
 
-**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
+    >**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
 
 ```KQL
 SecurityEvent
@@ -128,7 +135,7 @@ SecurityAlert
 
 9. 以下语句演示了使用项目运算符为结果集指定字段。
 
-**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
+    >**备注：** 在下面的每个代码块中输入查询后，你应该“运行”。
 
 在查询窗口中，输入以下语句并选择“**运行**”： 
 
@@ -149,6 +156,7 @@ SecurityAlert
 | order by severityOrder
 | project-away severityOrder
 ```
+
 
 ### 任务 3： 使用 Summarize 运算符分析 KQL 中的结果
 
@@ -216,7 +224,7 @@ SecurityEvent
 | summarize arg_max(TimeGenerated, *) by Account
 ```
 
-**备注**： 也可选择“已完成”栏来查看“总 CPU”和“用于已处理查询的数据”，并对两种语句之间的数据进行比较。
+>**备注：** 也可以通过选择“已完成”栏来查看“总 CPU”和“用于已处理查询的数据”，并对两种语句之间的数据进行比较。
 
 7. 以下语句演示了 make_list 函数。
 
@@ -240,6 +248,7 @@ SecurityEvent
 | summarize make_set(Account) by Computer
 ```
 
+
 ### 任务 4： 使用 Render 运算符以 KQL 创建可视化效果
 
 在此任务中，你将使用 KQL 语句生成可视化效果。
@@ -262,6 +271,7 @@ SecurityEvent
 | render timechart
 ```
 
+
 ### 任务 5： 使用 KQL 生成多表语句
 
 在此任务中，你将生成多表 KQL 语句。
@@ -269,12 +279,14 @@ SecurityEvent
 1. 以下语句演示了 union 运算符，该运算符采用两个或多个表，并返回所有表的行。有必要了解结果是如何通过竖线字符传递的，又是如何受到该字符影响的。在查询窗口中，输入以下语句，并分别针对每个语句选择“**运行**”以查看结果： 
 
 “**查询 1**”将返回 SecurityEvent 和 SecurityAlert 的所有行。
+
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
 ```
 
 “**查询 2**”将返回一行和一列，即 SecurityEvent 和 SecurityAlert 的所有行的计数。
+
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
@@ -283,6 +295,7 @@ SecurityEvent
 ```
 
 “**查询 3**”将返回 SecurityEvent 的所有行和 SecurityAlert 的其中一行。  SecurityAlert 的行将具有 SecurityAlert 行的计数。
+
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
@@ -312,6 +325,7 @@ SecurityEvent
 ```
 
 联接中指定的第一个表被看作是左表。  联接关键字后面的表被看作是右表。  处理表中的列时，名称 $left.Column 和 $right.Column 用于区分正在引用哪个表的列。 
+
 
 ### 任务 6：使用 KQL 处理字符串数据
 
@@ -400,7 +414,7 @@ SecurityAlert
 
 6. 若要创建函数：
 
-**备注：** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
+    >**备注：** 在用于本实验室中数据的 lademo 环境中，你将无法执行此操作，但这是你的环境中要使用的重要概念。 
 
 运行查询后，选择“**保存**”按钮，然后从下拉列表中选择“**另存为函数**”。输入所需的名称，例如：在“**函数名称**”框中输入“*MailboxForward*”，然后输入一个旧类别（例如“*常规*”），再选择“**保存**”。
 
@@ -411,4 +425,3 @@ MailboxForward
 ```
 
 ## 你已完成本实验室。
-

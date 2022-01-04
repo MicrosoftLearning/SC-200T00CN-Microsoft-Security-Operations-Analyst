@@ -1,12 +1,19 @@
-# 模块 8 - 实验室 1 - 练习 2 - 使用 Azure Sentinel 的笔记本进行威胁搜寻
+﻿---
+lab:
+    title: '练习 2 - 结合使用笔记本和 Microsoft Sentinel 来搜寻威胁'
+    module: '模块 8 - 在 Microsoft Sentinel 中执行威胁搜寻'
+---
+
+# 模块 8 - 实验室 1 - 练习 2 - 结合使用笔记本和 Microsoft Sentinel 来搜寻威胁
 
 ## 实验室场景
 
-你是一位安全运营分析师，你所在公司已实现 Azure Sentinel。你需要探索通过 Azure Sentinel 笔记本进行威胁搜寻的好处。
+你是一位安全运营分析师，你所在公司已实现 Microsoft Sentinel。你需要探索通过 Microsoft Sentinel 笔记本进行威胁搜寻的好处。
+
 
 ### 任务 1：探索笔记本
 
-在此任务中，你将探索在 Azure Sentinel 中使用笔记本。
+在此任务中，你将探索在 Microsoft Sentinel 中使用笔记本。
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机： **Pa55w.rd**。  
 
@@ -16,33 +23,34 @@
 
 4. 在“**输入密码**”对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择“**登录**”。
 
-5. 在 Azure 门户的搜索栏中，键入“*Sentinel*”，然后选择“**Azure Sentinel**”。
+5. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
-6. 选择 Azure Sentinel 工作区。
+6. 选择 Microsoft Sentinel 工作区。
 
-7. 在 Azure Sentinel 工作区中，选择“**笔记本**”。
+7. 在 Microsoft Sentinel 工作区中，选择“**笔记本**”。
 
-8. 接下来，需要选择 AzureML 工作区。选择“**配置 Azure 机器学习**”，然后在命令栏中选择“**创建新的 AML 工作区**”按钮。
+8. 接下来，需要选择 AzureML 工作区。选择“**配置 Azure 机器学习**”，然后在命令栏中选择“**新建 Azure ML 工作区**”按钮。
 
 9. 在“订阅”框中，选择你的订阅。
 
 10. 为资源组选择“**新建**”，然后输入 *RG-MachineLearning* 用作名称，再选择“**确定**”。 
 
 11.	在“工作区详细信息”部分中，执行以下任务：
-- 为工作区指定唯一的名称。
-- 选择区域（应默认选择了合理的选项）
-- 保存默认的“存储帐户”、“密钥保管库”和“应用程序见解”信息。
-- “容器注册表”选项可以保留为“**无**”。
+
+    - 为工作区指定唯一的名称。
+    - 选择区域（应默认选择了合理的选项）
+    - 保存默认的“存储帐户”、“密钥保管库”和“应用程序见解”信息。
+    - “容器注册表”选项可以保留为“**无**”。
 
 12.	在页面底部，选择“**查看 + 创建**”。 然后在下一页上，选择“**创建**”。
 
-**备注**： 部署机器学习工作区可能需要一些时间。 
+    >**备注**： 部署机器学习工作区可能需要一些时间。 
 
-13.	部署完成时，返回到 Azure Sentinel 门户。
+13.	部署完成后，返回到 Microsoft Sentinel 门户。
 
 14. 选择“**笔记本**”，然后选择“**模板**”选项卡。 
 
-15. 选择“**Azure Sentinel ML 笔记本入门指南**”，然后选择“**克隆笔记本模板**”按钮。在笔记本名称弹出菜单中，使用默认名称并选择“**保存**”。
+15. 选择“**Microsoft Sentinel ML 笔记本入门指南**”，然后选择“**克隆笔记本模板**”按钮。在笔记本名称弹出菜单中，使用默认名称并选择“**保存**”。
 
 16. 选择“**发布笔记本**”按钮。关闭 Microsoft Azure 机器学习工作室中可能出现的所有窗口。
 
@@ -56,6 +64,6 @@
 
 21. 从命令栏中选择“**橡皮擦**”图标清除笔记本中的所有结果，然后按照入门教程操作。
 
-**备注** 如果无法完成上述步骤来访问笔记本，可以改为在其 GitHub 页上查看。  在此处查看笔记本文件：[GitHub 上的 Azure Sentinal 笔记本](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
+>**备注** 如果无法完成上述步骤来访问笔记本，可以改为在其 GitHub 页上查看。  在此处查看笔记本文件：[GitHub 上的 Azure Sentinal 笔记本](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 
 ## 你已完成本实验室。

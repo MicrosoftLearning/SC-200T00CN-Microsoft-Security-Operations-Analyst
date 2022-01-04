@@ -1,8 +1,15 @@
-# 模块 6 - 实验室 1 - 练习 3 - 使用数据连接器将 Linux 主机连接到 Azure Sentinel
+﻿---
+lab:
+    title: '练习 3 - 使用数据连接器将 Linux 主机连接到 Microsoft Sentinel'
+    module: '模块 6 - 将日志连接到 Microsoft Sentinel'
+---
 
-### 任务 1：访问 Azure Sentinel 工作区。
+# 模块 6 - 实验室 1 - 练习 3 - 使用数据连接器将 Linux 主机连接到 Microsoft Sentinel
 
-在此任务中，你将访问 Azure Sentinel 工作区。
+
+### 任务 1：访问 Microsoft Sentinel 工作区。
+
+在此任务中，你将访问 Microsoft Sentinel 工作区。
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
@@ -14,15 +21,16 @@
 
 5. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
-6. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+6. 在 Azure 门户的搜索栏中，键入 Sentinel，然后选择“**Microsoft Sentinel**”。
 
-7. 选择你在之前的实验室中创建的 Azure Sentinel 工作区。
+7. 选择你在之前的实验室中创建的 Microsoft Sentinel 工作区。
+
 
 ### 任务 2：使用通用事件格式连接器连接 Linux 主机。
 
-在此任务中，你将通过通用事件格式 (CEF) 连接器将 Linux 主机连接到 Azure Sentinel。
+在此任务中，你将通过通用事件格式 (CEF) 连接器将 Linux 主机连接到 Microsoft Sentinel。
 
-1. 从 Azure Sentinel 的“配置”区域选择 **“数据连接器”**。 在“数据连接器”选项卡中，从列表中选择 **“通用事件格式(CEF)”** 连接器。
+1. 从 Microsoft Sentinel 的“配置”区域选择“**数据连接器**”。  在“数据连接器”选项卡中，从列表搜索“**通用事件格式(CEF)**”连接器并将其选中。
 
 2. 在连接器信息边栏选项卡上选择 **“打开连接器页面”**。
 
@@ -53,13 +61,14 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
    ![连接器脚本](../Media/LinuxConnected.png)
 
+
 ### 任务 3：使用 Syslog 连接器连接 Linux 主机。
 
-在此任务中，你将通过 Syslog 连接器将 Linux 主机连接到 Azure Sentinel。
+在此任务中，你将通过 Syslog 连接器将 Linux 主机连接到 Microsoft Sentinel。
 
-1. 连接到 WIN1，它应该已经在工作区的 Azure Sentinel 门户中。  
+1. 连接到 WIN1，它应该已经在工作区的 Microsoft Sentinel 门户中。  
 
-2. 从“数据连接器”选项卡，从列表中选择 **“Syslog”** 连接器。
+2. 在“数据连接器”选项卡中，从列表搜索 **Syslog** 连接器并将其选中。
 
 3. 在连接器信息边栏选项卡上选择 **“打开连接器页面”**。
 
@@ -77,7 +86,7 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
 9. 返回到 WIN1 虚拟机，右键单击开始菜单图标以管理员身份启动新的 Windows PowerShell，然后选择“**Windows PowerShell (管理员)**”。选择“是”，允许应用在出现的“用户帐户控制”窗口中运行。
 
-**备注**：如果通过输入“*退出*”关闭到 LIN1 的连接，完成了最后一个任务的安装，那么可重复使用 Windows PowerShell 窗口。
+   >**备注**： 如果最后一个任务的安装完成，可输入 *Exit* 关闭与 LIN1 的连接来重复使用 Windows PowerShell 窗口。
 
 10. 输入以下 PowerShell 命令，根据你的具体 Linux 服务器信息进行调整，然后按 Enter：
 
@@ -93,13 +102,14 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
 13. 粘贴脚本后，按 Enter。该脚本将在 Linux 服务器上远程运行。你已完成本任务。本课程中其他实验室均不会依赖于此连接。
 
+
 ### 任务 4：为 Syslog 连接器配置你想收集的设备及其严重性。
 
 在此任务中，你将配置 Syslog 收集设备。
 
 1. 连接到 WIN1 虚拟机。
 
-2. 在 Azure Sentinel 门户中，选 **择“设置”**，然后从设置边栏选项卡中选择 **“工作区设置”**。
+2. 在 Microsoft Sentinel 门户中，选择“**设置**”，然后从设置边栏选项卡中选择“**工作区设置**”。
 
 3. 在 **“设置”** 区域中，选择 **“代理配置”**。
 
