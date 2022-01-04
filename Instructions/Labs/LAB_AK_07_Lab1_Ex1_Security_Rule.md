@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 1 - 激活 Microsoft 安全规则'
     module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
