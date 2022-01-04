@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 1 - 部署 Microsoft Defender for Endpoint'
     module: '模块 2 - 使用 Microsoft Defender for Endpoint 缓解威胁'
