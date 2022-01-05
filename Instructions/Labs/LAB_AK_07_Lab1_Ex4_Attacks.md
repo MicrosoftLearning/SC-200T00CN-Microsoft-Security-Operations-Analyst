@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 4 - 连接检测建模'
     module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'

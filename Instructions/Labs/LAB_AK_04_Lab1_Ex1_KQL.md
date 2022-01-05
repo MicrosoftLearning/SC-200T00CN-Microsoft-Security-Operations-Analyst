@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 1 - 使用 Kusto 查询语言 (KQL) 为 Microsoft Sentinel 创建查询'
     module: '模块 4 - 使用 Kusto 查询语言 (KQL) 为 Microsoft Sentinel 创建查询'

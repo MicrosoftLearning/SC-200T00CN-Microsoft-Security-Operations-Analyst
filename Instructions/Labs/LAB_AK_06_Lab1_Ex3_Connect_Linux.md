@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 3 - 使用数据连接器将 Linux 主机连接到 Microsoft Sentinel'
     module: '模块 6 - 将日志连接到 Microsoft Sentinel'

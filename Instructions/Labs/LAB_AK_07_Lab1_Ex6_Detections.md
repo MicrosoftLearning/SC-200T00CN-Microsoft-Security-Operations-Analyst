@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 6 - 创建检测'
     module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'

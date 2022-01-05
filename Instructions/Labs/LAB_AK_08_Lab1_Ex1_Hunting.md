@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 1 - 在 Microsoft Sentinel 中执行威胁搜寻'
     module: '模块 8 - 在 Microsoft Sentinel 中执行威胁搜寻'

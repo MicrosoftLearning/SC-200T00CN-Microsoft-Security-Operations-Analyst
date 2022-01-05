@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 1 - 配置 Microsoft Sentinel 环境'
     module: '模块 5 - 配置 Microsoft Sentinel 环境'

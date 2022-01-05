@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '练习 2 - 使用 Microsoft Defender for Cloud 缓解威胁'
     module: '模块 3 - 使用 Microsoft Defender for Cloud 缓解威胁'
