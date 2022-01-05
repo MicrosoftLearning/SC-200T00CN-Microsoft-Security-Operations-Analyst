@@ -1,6 +1,6 @@
 ﻿---
 lab:
-    title: '练习 5 - 执行攻击'
+    title: '练习 5 - 进行攻击'
     module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
 ---
 

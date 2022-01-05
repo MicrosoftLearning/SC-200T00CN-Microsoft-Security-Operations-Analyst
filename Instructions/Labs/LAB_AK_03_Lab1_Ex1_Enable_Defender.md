@@ -130,7 +130,7 @@ lab:
 
 22. 输入 **R** 以运行一次，然后按 Enter（这可能需要几分钟时间）。
 
-23. 按照 PowerShell 中输出的最后一行的说明操作，完成设备注册。  其中包括通过浏览器对设备进行身份验证。  复制 URL (https://microsoft.com/devicelogin)，在新的 Microsoft Edge 浏览器标签页中输入它。返回到 Windows PowerShell 窗口，复制用于身份验证的代码并将其粘贴到前面打开的标签页中，然后选择“**下一步**”。选择你的租户管理员帐户，并在“*是否在尝试登录到 Azure 连接的虚拟代理?*”窗口中选择“**继续**”。 
+23. 按照 PowerShell 中输出的最后一行的说明操作，完成设备注册。  其中包括通过浏览器对设备进行身份验证。  复制 URL (https://microsoft.com/devicelogin)， 在新的 Microsoft Edge 浏览器标签页中输入它。返回到 Windows PowerShell 窗口，复制用于身份验证的代码并将其粘贴到前面打开的标签页中，然后选择“**下一步**”。选择你的租户管理员帐户，并在“*是否在尝试登录到 Azure 连接的虚拟代理?*”窗口中选择“**继续**”。 
 
 24. 在 Windows PowerShell 窗口中出现“已资源成功加载到 Azure”消息后，转到下载脚本的 Azure 门户页面，然后选择“**关闭**”。关闭“**使用 Azure Arc 添加服务器**”，返回到 Azure Arc 的“**服务器**”页面。
 

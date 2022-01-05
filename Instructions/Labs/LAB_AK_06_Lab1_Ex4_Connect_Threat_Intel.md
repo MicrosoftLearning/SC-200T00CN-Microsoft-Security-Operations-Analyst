@@ -41,6 +41,6 @@ lab:
 
     将拉取钓鱼 URL 并用其填充 ThreatIntelligenceIndicator 表。
 
->**备注**：如需更多集合，请在浏览器中打开 https://limo.anomali.com/api/v1/taxii2/feeds/collections/，使用来宾用户名加密码查看可用的各种集合 ID。
+>**备注**：如需更多集合，请在浏览器中打开 https://limo.anomali.com/api/v1/taxii2/feeds/collections/， 使用来宾用户名加密码查看可用的各种集合 ID。
 
 ## 你已完成本实验室。

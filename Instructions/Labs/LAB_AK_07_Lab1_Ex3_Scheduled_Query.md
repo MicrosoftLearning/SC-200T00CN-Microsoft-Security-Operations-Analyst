@@ -129,6 +129,6 @@ AuditLogs
 
 17. 应该会看到新创建的事件。选择“事件”并查看右侧边栏选项卡中的信息。
 
-18. 打开浏览器选项卡并转到 https://teams.microsoft.com，以打开 Microsoft Teams。转到 *SOC* 团队，查看发布的有关该事件的消息。
+18. 打开浏览器选项卡并转到 https://teams.microsoft.com， 以打开 Microsoft Teams。转到 *SOC* 团队，查看发布的有关该事件的消息。
 
 ## 转到练习 4
