@@ -1,4 +1,11 @@
+---
+lab:
+    title: '练习 5 - 进行攻击'
+    module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
+---
+
 # 模块 7 - 实验室 1 - 练习 5 - 进行攻击
+
 
 ### 任务 1：攻击配置了 Defender for Endpoint 的 Windows。
 
@@ -9,27 +16,28 @@
 2. 在任务栏的搜索框中，输入“*Command*”。  命令提示符将显示在搜索结果中。  右键单击命令提示符，并选择“**以管理员身份运行**”。在出现的“**用户帐户控件**”窗口中选择“**是**”，以允许应用运行。
 
 3. 在命令提示符中，在每一行中输入命令，并在每一行后按 Enter 键：
-```
+
+```Command
 cd \
 mkdir temp
 cd temp
 ```
 4. 攻击 1 - 复制并运行此命令：
 
-```
+```Command
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
 5. 攻击 3 - 复制并运行此命令：
 
-```
+```Command
 notepad c2.ps1
 ```
 选择“**是**”来创建一个新文件，并将下面的 PowerShell 脚本复制到 *c2.ps1* 中。
 
-**备注**：粘贴到虚拟机中的长度可能有限。如果无法直接从说明复制，请将此代码分为三部分进行粘贴，确保将脚本全部粘贴到虚拟机中。  确保脚本在记事本 *c2.ps1* 文件中的外观与在这些说明中一致。
+>**备注**：粘贴到虚拟机中的内容可能有长度限制。如果无法直接从说明中复制，请将此代码分为三部分进行粘贴，以便将所有脚本粘贴到虚拟机中。  确保脚本在记事本 *c2.ps1* 文件中的外观与在这些说明中一致。
 
-```
+```PowerShell
 param(
     [string]$Domain = "microsoft.com",
     [string]$Subdomain = "subdomain",
@@ -76,15 +84,15 @@ Do {
 Until ($TimeNow -ge $RunEnd)
 ```
 
-在“**记事本**”菜单中，选择“**文件**”，然后选择“**保存**”。在命令提示符窗口，通过在每一行后按 Enter 键，在每一行中输入以下命令：
+在“**记事本**”菜单中，选择“**文件**”，然后选择“**保存**”。在“命令提示符”窗口中，在每一行中输入以下命令，并在每一行后按 Enter 键。**备注**：你将看到解析错误。这在预料之中。
 
-```
+```Command
 powershell
 .\c2.ps1
 ```
 
-**备注**：你将看到解析错误。这在预料之中。
-**重要提示：** 请勿关闭此窗口。让此命令/powershell 脚本在后台运行。该命令需要在数小时内生成日志条目。在此脚本运行期间，你可以继续进行下一项任务和下一个练习。此任务创建的数据稍后将在威胁搜寻中使用。此过程不会创造大量的数据或处理。
+>**重要提示**：请勿关闭此窗口。让此命令/powershell 脚本在后台运行。该命令需要在数小时内生成日志条目。在此脚本运行期间，你可以继续进行下一项任务和下一个练习。此任务创建的数据稍后将在威胁搜寻中使用。此过程不会创造大量的数据或处理。
+
 
 ### 任务 2：攻击配置了 Sysmon 的 Windows
 
@@ -96,7 +104,7 @@ powershell
 
 3. 在命令提示符中，在每一行中输入命令，并在每一行后按 Enter 键：
 
-```
+```Command
 cd \
 mkdir temp
 cd \temp
@@ -104,13 +112,15 @@ cd \temp
 
 4. 攻击 1 - 将此命令复制到命令提示符应用并运行此命令：
 
-```
+```Command
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
+>**备注**：我们使用的是与 WIN1 中相同的持久性策略，但我们将在下一练习中使用其他检测。
+
 5. 攻击 2 - 复制并运行此命令，在每一行中输入命令，并在每一行后按 Enter 键：
 
-```
+```Command
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add

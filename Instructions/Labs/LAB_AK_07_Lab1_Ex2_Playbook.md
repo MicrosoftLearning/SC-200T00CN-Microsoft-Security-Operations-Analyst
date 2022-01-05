@@ -1,4 +1,11 @@
+---
+lab:
+    title: '练习 2 - 创建 Playbook'
+    module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
+---
+
 # 模块 7 - 实验室 1 - 练习 2 - 创建 Playbook
+
 
 ### 任务 1： 在 Microsoft Teams 中创建安全运营中心团队。
 
@@ -30,9 +37,10 @@
 
 13. 输入频道名称 *“新建警报”*，然后选择 **“添加”** 按钮。
 
-### 任务 2： 在 Azure Sentinel 中创建 Playbook。
 
-在此任务中，你将创建在 Azure Sentinel 用作 Playbook 的逻辑应用。
+### 任务 2：在 Microsoft Sentinel 中创建 Playbook。
+
+在此任务中，你将创建在 Microsoft Sentinel 中用作 Playbook 的逻辑应用。
 
 1. 在 Microsoft Edge 浏览器中，通过 https://portal.azure.com 导航到 Azure 门户。
 
@@ -40,13 +48,13 @@
 
 3. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
-4. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+4. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
-5. 选择之前创建的 Azure Sentinel 工作区。
+5. 选择之前创建的 Microsoft Sentinel 工作区。
 
 6. 在页面左侧的“**内容管理**”区域中选择“*社区*”页面。
 
-7. 在右侧窗格中选择“**加入社区内容**”链接。这将在 Microsoft Edge 浏览器中打开一个新的标签页显示 Azure Sentinel GitHub 内容。
+7. 选择右侧窗格中的“**加入社区内容**”链接。这将在 Microsoft Edge 浏览器中打开一个新的标签页，来查看 Microsoft Sentinel GitHub 内容。
 
 8. 选择 **“Playbooks”** 文件夹。
 
@@ -54,7 +62,7 @@
 
 10. 在 readme.md 框中，转到下面第二个“*快速部署*”选项 -“**使用警报触发器部署**”，然后选择“**部署到Azure**按钮。  
 
-**特别注意**：请注意，有两个不同的 Azure Sentinel 触发器可供使用，它们是“事件”和“警报”。确保选择了“警报”（第二个）。
+    >**关键提示**：请注意，有两个不同的 Microsoft Sentinel 触发器可供使用，它们是事件和警报。确保选中警报（第二个）。
 
 11. 确保选择了你的 Azure 订阅。
 
@@ -66,15 +74,16 @@
 
 15. 现在选择 **“创建”**。
 
-**备注** 请等待部署完成后再继续下一个任务。可能需要几分钟时间才能完成部署。
+    >**备注**：请等待部署完成后再继续下一个任务。可能需要几分钟时间才能完成部署。
 
-### 任务 3：在 Azure Sentinel 中更新 Playbook。
+
+### 任务 3：在 Microsoft Sentinel 中更新 Playbook。
 
 在此任务中，你将使用适当的连接信息更新创建的新 playbook。
 
-1. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+1. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
-2. 选择 Azure Sentinel 工作区。
+2. 选择 Microsoft Sentinel 工作区。
 
 3. 从“配置”区域选择“**自动**”，然后选择“**活动 Playbook**”选项卡。
 
@@ -82,19 +91,19 @@
 
 5. 在“*PostMessageTeams-OnAlert*”的逻辑应用页面，选择中间菜单中的“**编辑**”。
 
-6. 选择“**触发对 Azure Sentinel 警报的响应时**”块。
+6. 选择*第一个块* -“**触发对 Microsoft Sentinel 警报的响应时**”。
 
 7. 选择“**更改连接**”链接。
 
 8. 选择“**新添**”，再选择“**登录**”。在新窗口中，出现提示时选择你的 Azure 订阅管理员凭据。
 
-9. 现在选择“**警报- 获取事件**”块。
+9. 现在，选择*第二个块* -“**警报 - 获取事件**”。
 
 10. 选择“**更改连接**”链接。
 
 11. 在“*显示名称*”下选择具有 Azure 订阅管理员凭据的连接。**提示**：admin@ZZZZZZ.onmicrosoft.com。
 
-12. 现在选择“**连接**”块。
+12. 现在，选择*第三个块* -“**连接**”。
 
 13. 选择“**新增**”，出现提示时选择你的 Azure 订阅管理员凭据。
 

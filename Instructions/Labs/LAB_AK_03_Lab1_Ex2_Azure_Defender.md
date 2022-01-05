@@ -1,8 +1,15 @@
-# 模块 3 - 实验室 1 - 练习 2 -使用 Microsoft Defender for Cloud 缓解威胁
+---
+lab:
+    title: '练习 2 - 使用 Microsoft Defender for Cloud 缓解威胁'
+    module: '模块 3 - 使用 Microsoft Defender for Cloud 缓解威胁'
+---
+
+# 模块 3 - 实验室 1 - 练习 2 - 使用 Microsoft Defender for Cloud 缓解威胁
 
 ## 实验室场景
 
 你是一名安全运营分析师，你所在公司已实现 Microsoft Defender for Cloud。你负责应对由 Microsoft Defender for Cloud 生成的安全警报。
+
 
 ### 任务 1：缓解安全警报
 
@@ -24,7 +31,7 @@
 
 8. 在“创建示例警报(预览)”窗格中，确保已选择你的订阅。  确保在“*Defender for Cloud 计划*”区域中中选中所有示例警报，然后选择“**创建示例警报**”。  
 
-**备注**：此示例警报创建过程可能需要几分钟才能完成，请等待显示“已成功创建示例警报”通知。完成后，每个警报都应显示在“*安全警报*”区域中。
+    >**备注**：此示例警报创建过程可能需要几分钟时间才能完成，请等待出现“已成功创建示例警报”通知。完成后，每个警报都应显示在“*安全警报*”区域。
 
 9. 对于每个警报，请执行以下操作:  
 

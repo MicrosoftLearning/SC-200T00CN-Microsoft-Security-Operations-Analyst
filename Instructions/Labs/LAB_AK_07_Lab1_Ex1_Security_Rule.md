@@ -1,8 +1,15 @@
+---
+lab:
+    title: '练习 1 - 激活 Microsoft 安全规则'
+    module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
+---
+
 # 模块 7 - 实验室 1 - 练习 1 - 激活 Microsoft 安全规则
 
 ## 实验室场景
 
-你是一位安全运营分析师，你所在公司已实现 Azure Sentinel。你需要了解如何使用 Azure Sentinel 检测和缓解威胁。  需要启用其他 Microsoft 365 和 Azure 服务的警报。  
+你是一位安全运营分析师，你所在公司已实现 Microsoft Sentinel。你需要了解如何使用 Microsoft Sentinel 检测和缓解威胁。  需要启用其他 Microsoft 365 和 Azure 服务的警报。  
+
 
 ### 任务 1：激活 Microsoft 安全规则
 
@@ -16,9 +23,9 @@
 
 4. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
-5. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+5. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
-6. 选择你在前面实验室中创建的 Azure Sentinel 工作区。
+6. 选择你在前面实验室中创建的 Microsoft Sentinel 工作区。
 
 7. 从“配置”区域选择 **“分析”**，然后选择 **“规则模板”** 选项卡。
 

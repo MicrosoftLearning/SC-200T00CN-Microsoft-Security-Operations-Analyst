@@ -1,12 +1,19 @@
-# 模块 5 - 实验室 1 - 练习 1 - 配置 Azure Sentinel 环境
+---
+lab:
+    title: '练习 1 - 配置 Microsoft Sentinel 环境'
+    module: '模块 5 - 配置 Microsoft Sentinel 环境'
+---
+
+# 模块 5 - 实验室 1 - 练习 1 - 配置 Microsoft Sentinel 环境
 
 ## 实验室场景
 
-你是一位安全运营分析师，你所在公司正在实现 Azure Sentinel。你负责设置满足公司要求的 Azure Sentinel 环境，并最大程度降低成本、符合法规要求，同时为安全团队提供最易于管理的环境，以便其履行日常工作职责。
+你是一位安全运营分析师，你所在公司正在实现 Microsoft Sentinel。你负责设置满足公司要求的 Microsoft Sentinel 环境，并最大程度降低成本、符合法规要求，同时为安全团队提供最易于管理的环境，以便其履行日常工作职责。
 
-### 任务 1：初始化 Azure Sentinel 工作区。
 
-在此任务中，你将创建 Azure Sentinel 工作区。
+### 任务 1：初始化 Microsoft Sentinel 工作区。
+
+在此任务中，你将创建 Microsoft Sentinel 工作区。
 
 1. 使用以下密码以管理员身份登录到 WIN1 虚拟机：**Pa55w.rd**。  
 
@@ -18,13 +25,13 @@
 
 5. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
-6. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+6. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
 7. 选择 **“+ 创建”**。
 
 8. 接下来，选择 **“新建工作区”**。
 
-**备注**：首先，创建新的 Log Analytics 工作区。
+    >**备注**：首先，创建新的 Log Analytics 工作区。
 
 9. 选择合适的订阅。
 
@@ -32,27 +39,29 @@
 
 11. 在“名称”字段中的 *“实例详细信息”* 下，输入为 Log Analytics 工作区选择的名称。
 
-**备注:** 此名称也将是 Azure Sentinel 工作区名称。
+    >**备注**：此名称也将是 Microsoft Sentinel 工作区的名称。
 
 12. 选择适合你的区域。适当的区域可采用默认区域，或者讲师可能会对选择哪个区域提供具体建议。  
 
 13. 选择 **“查看 + 创建”**。
 
-14. 在“创建 Log Analytics 工作区”区域，选择 **“创建”**。等待 *“将 Azure Sentinel 添加到工作区”* 页面上的列表中显示新的 Log Analytics 工作区。  这可能需要一分钟时间。
+14. 在“创建 Log Analytics 工作区”区域，选择“**创建**”。等待“*将 Microsoft Sentinel 添加到工作区*”页面上的列表中显示新的 Log Analytics 工作区。  这可能需要一分钟时间。
 
 15. 在新创建的工作区显示时将其选中，然后选择“**添加**”。这可能需要几分钟时间。
 
-16. 浏览新建的 Azure Sentinel 工作区以熟悉用户界面选项。
+16. 浏览新建的 Microsoft Sentinel 工作区以熟悉用户界面选项。
+
 
 ### 任务 2：创建 Watchlist。
 
-在此任务中，你将在 Azure Sentinel 中创建 Watchlist。
+在此任务中，你将在 Microsoft Sentinel 中创建监视列表。
 
 1. 在 Windows 10 屏幕底部的搜索框中，输入“*记事本*”。  从结果中选择“**记事本**”。
 
 2. 键入“*主机名*”，然后输入新行。
 
 3. 在记事本的第 2 行到第 6 行，复制以下主机名，每个主机名单独列一行：
+
 ```Notepad
 Host1
 Host2
@@ -65,14 +74,17 @@ Host5
 
 5. 关闭记事本。
 
-6. 在 Azure Sentinel 中，在“配置”区域中选择 **“Watchlist”** 选项。
+6. 在 Microsoft Sentinel 中，在“配置”区域中选择“**Watchlist**”选项。
 
 7. 从命令栏中选择 **“+ 添加新增”**。
 
 8. 在 Watchlist 向导中，输入以下内容：
-    名称： HighValueHosts
-    说明：高价值主机
-    Watchlist 别名：HighValueHosts
+
+    |常规设置|值|
+    |---|---|
+    |名称|**HighValueHosts**|
+    |说明|**高价值主机**|
+    |Watchlist 别名|**HighValueHosts**|
 
 9. 选择 **“下一步: 源 >”**。
 
@@ -88,23 +100,22 @@ Host5
 
 15. 选择新 watchlist。  在右侧选项卡上，选择 **“在 Log Analytics 查看”**。
 
-16. 以下 KQL 语句将自动执行，并显示结果。
+16. 现在，可以在自己的 KQL 语句中使用 _GetWatchlist('HighValueHosts') 来访问列表。要引用的列将是*主机名*。
 
 ```KQL
 _GetWatchlist('HighValueHosts')
 ```
 
-**备注**：完成导入需要几分钟时间。你可继续执行以下任务，稍后再回来运行此命令。
-
-现在，可以在自己的 KQL 语句中使用 _GetWatchlist('HighValueHosts') 来访问列表。要引用的列将是*主机名*。
+>**备注**：导入可能需要几分钟时间才能完成。可继续执行后面的任务，稍后再回来运行此命令。
 
 17. 选择右上角的“x”可关闭“*日志*”窗口，单击“**确定**”可放弃未保存的编辑。
 
+
 ### 任务 3：创建威胁指标。
 
-在此任务中，你将在 Azure Sentinel 中创建指标。
+在此任务中，你将在 Microsoft Sentinel 中创建指标。
 
-1. 在 Azure Sentinel 中，在“威胁管理”区域中选择“**威胁智能**”选项。
+1. 在 Microsoft Sentinel 中，在“威胁管理”区域中选择“**威胁智能**”选项。
 
 2. 从命令栏中选择 **“+ 添加新增”**。
 
@@ -118,7 +129,7 @@ _GetWatchlist('HighValueHosts')
 
 7. 选择 **“应用”**。
 
-**备注**：指标可能需要几分钟才能显示。
+    >**备注**：指标可能需要几分钟时间才能显示。
 
 8. 在“常规”区域中选择“**日志**”选项。可能需要禁用“始终显示查询”选项，并关闭“*查询*”窗口来运行语句。
 

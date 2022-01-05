@@ -1,3 +1,9 @@
+---
+lab:
+    title: '练习 4 - 连接检测建模'
+    module: '模块 7 - 使用 Microsoft Sentinel 创建检测并执行调查'
+---
+
 # 模块 7 - 实验室 1 - 练习 4 - 连接检测建模
 
 ### 任务 1：了解攻击
@@ -6,7 +12,7 @@
 
 攻击模式基于开源项目： https://github.com/redcanaryco/atomic-red-team
 
-**备注**：为了方便演示实验室，某些设置触发的时间期限较短。
+>**备注**：为了方便演示实验室，某些设置触发的时间期限较短。
 
 #### 攻击 1 - 通过注册表项添加实现的持久性攻击。
 
@@ -26,7 +32,7 @@ net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-### 攻击 3 -DNS / C2 
+### 攻击 3 - DNS/C2 
 
 此攻击将模拟命令和控制 (C2) 通信。
 
@@ -71,6 +77,7 @@ Do {
 }
 Until ($TimeNow -ge $RunEnd)
 ```
+
 
 ### 任务 2：了解检测建模。
 

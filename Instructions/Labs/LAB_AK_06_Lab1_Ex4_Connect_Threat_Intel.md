@@ -1,4 +1,11 @@
-# 模块 6 - 实验室 1 - 练习 4 - 使用数据连接器将威胁情报连接到 Azure Sentinel
+---
+lab:
+    title: '练习 4 - 使用数据连接器将威胁情报连接到 Microsoft Sentinel'
+    module: '模块 6 - 将日志连接到 Microsoft Sentinel'
+---
+
+# 模块 6 - 实验室 1 - 练习 4 - 使用数据连接器将威胁情报连接到 Microsoft Sentinel
+
 
 ### 任务 1：连接威胁情报。
 
@@ -12,9 +19,9 @@
 
 4. 在 **“输入密码”** 对话框中，复制粘贴实验室托管提供者提供的**租户密码**，然后选择 **“登录”**。
 
-5. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择 **“Azure Sentinel”**。
+5. 在 Azure 门户的搜索栏中，键入 *Sentinel*，然后选择“**Microsoft Sentinel**”。
 
-6. 选择之前创建的 Azure Sentinel 工作区。
+6. 选择之前创建的 Microsoft Sentinel 工作区。
 
 7. 在“数据连接器”选项卡中，选择 **“威胁情报 - TAXII”** 连接器。
 
@@ -32,8 +39,8 @@
 
 14. 限制选择 **“添加”** 按钮。
 
-将拉取钓鱼 URL 并用其填充 ThreatIntelligenceIndicator 表。
+    将拉取钓鱼 URL 并用其填充 ThreatIntelligenceIndicator 表。
 
-**备注**：如需其他集合，请在浏览器中打开 https://limo.anomali.com/api/v1/taxii2/feeds/collections/，使用来宾用户名和密码查看可用的不同集合 ID。
+>**备注**：如需更多集合，请在浏览器中打开 https://limo.anomali.com/api/v1/taxii2/feeds/collections/， 使用来宾用户名加密码查看可用的各种集合 ID。
 
 ## 你已完成本实验室。
